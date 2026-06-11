@@ -126,7 +126,7 @@ plugins:
       unlistWhenEncrypted: false
       outputPath: static/encryptedContentIndex.json
   - source: github:quartz-community/stacked-pages
-    enabled: false
+    enabled: true
     layout:
       position: afterBody
       priority: 50
@@ -267,12 +267,11 @@ plugins:
       enableCopyTool: false
   - source:
       name: quartz-themes
-      repo: "https://github.com/saberzero1/quartz-themes"
+      repo: https://github.com/saberzero1/quartz-themes.git
       subdir: plugin
     enabled: true
     options:
-      theme: its-theme
-      variation: ttrpg-wotc
+      theme: its-theme.ttrpg-wotc
       mode: both
   - source: github:quartz-community/obsidian-plugin-excalidraw
     enabled: true
@@ -282,11 +281,11 @@ plugins:
       exportPadding: 20
     order: 50
   - source: github:quartz-community/tui
-    enabled: true
+    enabled: false
     options: {}
     order: 50
   - source: github:quartz-community/obsidian-plugin-ttrpg-tools-maps
-    enabled: true
+    enabled: false
     order: 50
     options:
       blockLanguage: zoommap
@@ -294,7 +293,7 @@ plugins:
       maxInlineDataBytes: 0
       defaultIconKey: pin-red
   - source: github:quartz-community/obsidian-plugin-leaflet
-    enabled: true
+    enabled: false
     order: 50
     options: {}
 layout:
