@@ -181,6 +181,18 @@
       "commit": "dad0a4c0abdc8b3c2786277a2cbd67dc039c754c",
       "installedAt": "2026-06-03T13:32:35.851Z"
     },
+    "obsidian-plugin-leaflet": {
+      "source": "github:quartz-community/obsidian-plugin-leaflet",
+      "resolved": "https://github.com/quartz-community/obsidian-plugin-leaflet.git",
+      "commit": "d67052661cf39342b13094c2c560b1275d395504",
+      "installedAt": "2026-06-11T18:41:37.631Z"
+    },
+    "obsidian-plugin-ttrpg-tools-maps": {
+      "source": "github:quartz-community/obsidian-plugin-ttrpg-tools-maps",
+      "resolved": "https://github.com/quartz-community/obsidian-plugin-ttrpg-tools-maps.git",
+      "commit": "c43314724a7606dd18b90972c457f593ccded5f5",
+      "installedAt": "2026-06-11T18:41:37.601Z"
+    },
     "og-image": {
       "source": "github:quartz-community/og-image",
       "resolved": "https://github.com/quartz-community/og-image.git",
@@ -281,6 +293,12 @@
       "resolved": "https://github.com/quartz-community/tag-page.git",
       "commit": "eabf3eec55c0bab7f49e69957341f34d2ae3c5a1",
       "installedAt": "2026-06-03T13:32:36.377Z"
+    },
+    "tui": {
+      "source": "github:quartz-community/tui",
+      "resolved": "https://github.com/quartz-community/tui.git",
+      "commit": "d1d51a626ef84a6f4d0933cce2b834a9db92282b",
+      "installedAt": "2026-06-11T18:41:37.572Z"
     },
     "unlisted-pages": {
       "source": "github:quartz-community/unlisted-pages",
