@@ -268,7 +268,7 @@ plugins:
   - source:
       name: quartz-themes
       repo: "https://github.com/saberzero1/quartz-themes.git"
-      subdir: plugins
+      subdir: plugin
     enabled: true
     options:
       theme: its-theme
