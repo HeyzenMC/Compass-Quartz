@@ -1,13 +1,13 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Quartz 5
+  pageTitle: Compass
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
   analytics:
     provider: plausible
   locale: en-US
-  baseUrl: heyzenmc.github.io/Compass-Quartz
+  baseUrl: heyzenmc.github.io/Compass-Quartz/
   ignorePatterns:
     - private
     - templates
@@ -97,7 +97,7 @@ plugins:
       renderEngine: katex
     order: 80
   - source: github:quartz-community/citations
-    enabled: false
+    enabled: true
     order: 85
   - source: github:quartz-community/hard-line-breaks
     enabled: true
@@ -142,10 +142,12 @@ plugins:
     enabled: true
   - source: github:quartz-community/og-image
     enabled: true
+    options: {}
   - source: github:quartz-community/cname
     enabled: true
   - source: github:quartz-community/canvas-page
     enabled: true
+    options: {}
   - source: github:quartz-community/content-page
     enabled: true
   - source: github:quartz-community/folder-page
@@ -175,6 +177,7 @@ plugins:
     layout:
       position: right
       priority: 50
+    options: {}
   - source: github:quartz-community/article-title
     enabled: true
     layout:
@@ -264,12 +267,13 @@ plugins:
       enableCopyTool: false
   - source:
       name: quartz-themes
-      repo: github:saberzero1/quartz-themes
+      repo: https://github.com/saberzero1/quartz-themes.git
       subdir: plugin
     enabled: true
     options:
-      theme: its-theme
+      theme: ITS-theme
       variation: ttrpg-wotc
+      mode: both
   - source: github:quartz-community/obsidian-plugin-excalidraw
     enabled: true
     options:
@@ -277,6 +281,22 @@ plugins:
       darkMode: auto
       exportPadding: 20
     order: 50
+  - source: github:quartz-community/tui
+    enabled: true
+    options: {}
+    order: 50
+  - source: github:quartz-community/obsidian-plugin-ttrpg-tools-maps
+    enabled: true
+    order: 50
+    options:
+      blockLanguage: zoommap
+      inlineBlockHeaderId: ZOOMMAP-DATA
+      maxInlineDataBytes: 0
+      defaultIconKey: pin-red
+  - source: github:quartz-community/obsidian-plugin-leaflet
+    enabled: true
+    order: 50
+    options: {}
 layout:
   groups:
     toolbar:
@@ -289,7 +309,6 @@ layout:
         beforeBody: []
         left: []
         right: []
-    content: {}
     folder:
       exclude:
         - reader-mode
@@ -302,3 +321,4 @@ layout:
         right: []
     canvas: {}
     bases: {}
+    content: {}
