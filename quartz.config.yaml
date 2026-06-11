@@ -268,8 +268,8 @@ plugins:
       subdir: plugin
     enabled: true
     options:
-      theme: its-theme
-      variation: ttrpg-dnd
+      theme: "its-theme"
+      variation: "ttrpg-dnd"
       mode: both
   - source: github:quartz-community/obsidian-plugin-excalidraw
     enabled: true
