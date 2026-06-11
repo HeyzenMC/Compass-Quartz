@@ -18,10 +18,8 @@ concurrency:
   cancel-in-progress: false
  
 jobs:
-
 - name: Fetch Quartz Theme
-  run: curl -s -S https://raw.githubusercontent.com/saberzero1/quartz-themes/master/action.sh | bash -s -- $THEME_NAME
-
+  run: curl -s -S https://raw.githubusercontent.com/saberzero1/quartz-themes/master/action.bat | bash -s -- $THEME_NAME
   build:
     runs-on: ubuntu-latest
     steps:
