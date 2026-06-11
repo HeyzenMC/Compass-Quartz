@@ -1,18 +1,18 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Compass
+  pageTitle: Quartz 5
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
   analytics:
     provider: plausible
   locale: en-US
-  baseUrl: heyzenmc.github.io/Compass-Quartz/
+  baseUrl: heyzenmc.github.io/Compass-Quartz
   ignorePatterns:
     - private
     - templates
     - .obsidian
-  theme: 
+  theme:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
@@ -264,23 +264,18 @@ plugins:
       enableCopyTool: false
   - source:
       name: quartz-themes
-      repo: "https://github.com/saberzero1/quartz-themes.git"
+      repo: github:saberzero1/quartz-themes
       subdir: plugin
     enabled: true
     options:
-      theme: "its-theme"
-      variation: "ttrpg-dnd"
-      mode: both
+      theme: its-theme
+      variation: ttrpg-wotc
   - source: github:quartz-community/obsidian-plugin-excalidraw
     enabled: true
     options:
       enableInteraction: true
       darkMode: auto
       exportPadding: 20
-    order: 50
-  - source: github:quartz-community/tui
-    enabled: true
-    options: {}
     order: 50
 layout:
   groups:
