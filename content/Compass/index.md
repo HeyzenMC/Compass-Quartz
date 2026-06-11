@@ -1,9 +1,11 @@
 ---
-folderNote: true
+folderNote: false
 dg-publish: true
 dg-home: true
 dg-folder-notes: true
 ---
+# Compass
+
 ![[Main-Page Maybe.base]]
 
 

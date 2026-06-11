@@ -2,13 +2,8 @@
 dg-publish: true
 icon: LiNotebook
 ---
-%% Begin Landmark %%
-- **[[Encounter]]**
-	- [[Big Top Fight]]
-- [[Session 1 - Lars und Yvonne]]
-- [[Session 1 - Planung.canvas]]
+# sessions
 
-%% End Landmark %%
 
 
 
