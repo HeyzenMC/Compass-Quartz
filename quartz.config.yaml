@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: en-US
-  baseUrl: heyzenmc.github.io/Compass-Quartz
+  baseUrl: heyzenmc.github.io/Compass-Quartz/
   ignorePatterns:
     - private
     - templates
