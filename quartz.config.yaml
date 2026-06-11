@@ -271,7 +271,7 @@ plugins:
       subdir: plugins
     enabled: true
     options:
-      theme: its-theme
+      theme: ITS-theme
       variation: ttrpg-wotc
       mode: both
   - source: github:quartz-community/obsidian-plugin-excalidraw
