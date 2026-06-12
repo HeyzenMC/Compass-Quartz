@@ -1,3 +1,27 @@
 @use "./variables.scss" as *;
 
 // put your custom CSS here!
+
+a.internal {
+  background-color: transparent !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+
+// Ordner-Namen in anderer Farbe
+.explorer .folder-title,
+.explorer-folder-title {
+  color: var(#8B2323); // oder eine eigene Farbe wie #e07a5f
+  font-weight: 600;
+}
+
+// Aktuelle Seite/Ordner highlighten
+.explorer a.active,
+.explorer li.active > .folder-title {
+  background-color: var(--highlight);
+  border-radius: 4px;
+}
+
+.folder-content > p:first-of-type {
+  display: none;
+}
