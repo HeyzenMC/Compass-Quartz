@@ -11,6 +11,10 @@ import { promises as fs } from "fs"
 import path from "path"
 
 const CONTENT_DIR = process.argv[2] || "content"
+// Sub-path your site is hosted under, e.g. "/Compass-Quartz" for
+// heyzenmc.github.io/Compass-Quartz. Leave empty ("") if hosted at the
+// domain root (e.g. a custom domain or username.github.io repo).
+const BASE_PATH = process.argv[3] || ""
 
 // Build a lookup table: lowercase filename (without extension) -> slug path
 async function buildSlugIndex(dir, baseDir = dir, index = new Map()) {
@@ -38,7 +42,7 @@ async function buildSlugIndex(dir, baseDir = dir, index = new Map()) {
           )
           .join("/")
 
-      const slug = "/" + slugify(withoutExt)
+      const slug = BASE_PATH + "/" + slugify(withoutExt)
 
       // Index by both the bare filename and the relative path (lowercase),
       // mirroring Quartz's "shortest" link resolution.
