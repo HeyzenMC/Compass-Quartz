@@ -19,6 +19,7 @@ dg-hide: true
 ![[Races Compass.png]]
 ![[Reeee Token.png]]
 ![[Token für Ramy.png]]
+![[Abenteuer-Icon.jpg]]
 ![[Compass First Draft.jpg]]
 ![[Witchlight Carnival Battle.jpg]]
 

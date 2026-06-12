@@ -1,6 +1,6 @@
 ---
 folderNote: true
-Cover: "[[Dragon Compass.png]]"
+Cover: "[[Abenteuer-Icon.jpg]]"
 ---
 # Abenteuer
 

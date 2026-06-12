@@ -18,7 +18,7 @@ views:
     order:
       - formula.Neu
     sort:
-      - property: file.name
+      - property: file.folder
         direction: ASC
     imageAspectRatio: 1
     cardSize: 200
@@ -32,7 +32,7 @@ views:
         - '!file.name.contains("Compass")'
         - folderNote == true
     order:
-      - file.name
+      - formula.Neu
     sort:
       - property: file.name
         direction: ASC
@@ -49,7 +49,7 @@ views:
         - file.folder.contains("Compass")
         - '!file.name.contains("Compass")'
     order:
-      - file.name
+      - formula.Neu
     sort:
       - property: file.name
         direction: ASC
@@ -61,8 +61,8 @@ views:
         - '!file.name.contains("Compass")'
         - file.folder.contains("Compass")
     order:
-      - file.name
+      - formula.Neu
     sort:
-      - property: file.name
+      - property: file.folder
         direction: ASC
     rowHeight: medium

@@ -1,8 +1,9 @@
 ---
-folderNote: false
+folderNote: true
 dg-publish: true
 dg-home: true
 dg-folder-notes: true
+Cover: "[[Compass Icon-Website.png]]"
 ---
 # Compass
 
