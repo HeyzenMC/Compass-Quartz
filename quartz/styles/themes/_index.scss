@@ -8101,7 +8101,7 @@ html[saved-theme="dark"] {
 
     a.internal-link,
     .breadcrumb-container .breadcrumb-element > a {
-      background-color: var(--link-background);
+      background-color: transparent !important;
       color: var(--link-color);
       cursor: var(--cursor-link);
       filter: none;
@@ -8110,11 +8110,12 @@ html[saved-theme="dark"] {
       font-family: var(--link-font);
       font-weight: var(--link-weight);
       outline: rgb(97, 175, 239) none 0px;
-      text-decoration: underline;
+      text-decoration: none !important;
       text-decoration-color: rgb(97, 175, 239);
       text-decoration-line: var(--link-decoration);
       text-decoration-style: solid;
       text-decoration-thickness: var(--link-decoration-thickness);
+      padding: 0;
       transition: opacity 0.14s ease-in-out;
       transform: none;
       user-select: text;
