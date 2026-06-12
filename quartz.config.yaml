@@ -265,9 +265,8 @@ plugins:
     enabled: true
     options:
       enableCopyTool: true
-  - source:
+  - source:github:saberzero1/quartz-themes.git
       name: quartz-themes
-      repo: https://github.com/saberzero1/quartz-themes.git
       subdir: plugin
     enabled: true
     options:
