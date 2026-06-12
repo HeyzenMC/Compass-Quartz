@@ -16,8 +16,8 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Cinzel !important;
-      body: Inclusive Sans !important;
+      header: Cinzel
+      body: Inclusive Sans
       code: IBM Plex Mono
     colors:
       lightMode:
@@ -110,6 +110,9 @@ plugins:
     order: 92
   - source: github:quartz-community/fonts
     enabled: true
+    options:
+      useThemeFonts: false
+      fontOrigin: googleFonts
   - source: github:quartz-community/remove-draft
     enabled: true
   - source: github:quartz-community/explicit-publish
