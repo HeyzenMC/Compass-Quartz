@@ -18,3 +18,7 @@ a.internal {
 .page-listing > p:first-child {
   display: none !important;
 }
+.page-listing .meta,
+.page-listing .tags {
+  display: none !important;
+}
