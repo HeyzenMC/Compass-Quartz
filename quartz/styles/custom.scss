@@ -16,13 +16,12 @@ a.internal {
 }
 
 // Aktiven Ordner/Seite highlighten
-.explorer-link.active,
-.explorer-link[data-folderpath].active {
-  background-color: var(--highlight);
-  border-radius: var(--radius-s, 4px);
-  padding: 0 4px;
+.folder-button[aria-current="page"],
+.folder-button[aria-current="page"] .folder-title {
+  background-color: var(--highlight) !important;
+  border-radius: 4px;
 }
 
-.folder-content > p:first-of-type {
-  display: none;
+.page-listing > p:first-child {
+  display: none !important;
 }
