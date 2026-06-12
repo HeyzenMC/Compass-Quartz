@@ -97,7 +97,7 @@ plugins:
       renderEngine: katex
     order: 80
   - source: github:quartz-community/citations
-    enabled: true
+    enabled: false
     order: 85
   - source: github:quartz-community/hard-line-breaks
     enabled: true
@@ -126,7 +126,7 @@ plugins:
       unlistWhenEncrypted: true
       outputPath: static/encryptedContentIndex.json
   - source: github:quartz-community/stacked-pages
-    enabled: true
+    enabled: false
     layout:
       position: afterBody
       priority: 50
