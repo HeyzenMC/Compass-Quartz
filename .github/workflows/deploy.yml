@@ -48,7 +48,7 @@ jobs:
       - name: Install Quartz plugins
         run: npx quartz plugin install
       - name: Resolve canvas wikilinks
-        run: node scripts/resolve-canvas-wikilinks.mjs content
+        run: node scripts/resolve-canvas-wikilinks.mjs content /Compass-Quartz
       - name: Build Quartz
         run: npx quartz build
       - name: Upload artifact
