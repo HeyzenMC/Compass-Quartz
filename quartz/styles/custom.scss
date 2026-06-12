@@ -15,11 +15,12 @@ a.internal {
   font-weight: 600;
 }
 
-// Aktuelle Seite/Ordner highlighten
-.explorer a.active,
-.explorer li.active > .folder-title {
+// Aktiven Ordner/Seite highlighten
+.explorer-link.active,
+.explorer-link[data-folderpath].active {
   background-color: var(--highlight);
-  border-radius: 4px;
+  border-radius: var(--radius-s, 4px);
+  padding: 0 4px;
 }
 
 .folder-content > p:first-of-type {
