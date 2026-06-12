@@ -47,6 +47,8 @@ jobs:
         run: curl -s -S https://raw.githubusercontent.com/saberzero1/quartz-themes/master/action.sh | bash -s -- $THEME_NAME
       - name: Install Quartz plugins
         run: npx quartz plugin install
+      - name: Resolve canvas wikilinks
+        run: node scripts/resolve-canvas-wikilinks.mjs content
       - name: Build Quartz
         run: npx quartz build
       - name: Upload artifact
