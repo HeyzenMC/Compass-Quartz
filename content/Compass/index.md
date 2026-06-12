@@ -15,6 +15,6 @@ Cover: "[[Compass Icon-Website.png]]"
 
 > [!quote] D.T. Explorer
 > "Who do we ask if we don't know which way to go?"
-> > 
-> ![[Dora.png|left]]
+> 
+>![[Dora.png|left]]
 
