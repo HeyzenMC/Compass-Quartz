@@ -15,10 +15,6 @@ a.internal {
   font-weight: 600;
 }
 
-.page-listing > p:first-child {
-  display: none !important;
-}
-.page-listing .meta,
-.page-listing .tags {
+.page-listing {
   display: none !important;
 }
