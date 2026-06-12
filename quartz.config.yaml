@@ -267,7 +267,7 @@ plugins:
       enableCopyTool: true
   - source:
       name: quartz-themes
-      repo: "https://github.com/saberzero1/quartz-themes.git"
+      repo: github:saberzero1/quartz-themes
       subdir: plugin
     enabled: true
     options:
