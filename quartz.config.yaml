@@ -13,12 +13,12 @@ configuration:
     - templates
     - .obsidian
 theme:
-    fontOrigin: "googleFonts"
+    fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: "Cinzel"
-      body: "Inclusive Sans"
-      code: "IBM Plex Mono"
+      header: Cinzel
+      body: Inclusive Sans
+      code: IBM Plex Mono
     colors:
       lightMode:
         light: "#fdf6e3"
