@@ -11,8 +11,9 @@ a.internal {
 // Ordner-Namen in anderer Farbe
 .explorer .folder-title,
 .explorer-folder-title {
-  color: var(#8B2323); // oder eine eigene Farbe wie #e07a5f
+  color: #8B2323; // oder eine eigene Farbe wie #e07a5f
   font-weight: 600;
+}
 }
 
 // Aktuelle Seite/Ordner highlighten
