@@ -181,7 +181,7 @@ plugins:
       priority: 50
     options: {}
   - source: github:quartz-community/article-title
-    enabled: true
+    enabled: false
     layout:
       position: beforeBody
       priority: 10
