@@ -16,8 +16,8 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Cinzel
-      body: Inclusive Sans
+      header: Cinzel !important;
+      body: Inclusive Sans !important;
       code: IBM Plex Mono
     colors:
       lightMode:
