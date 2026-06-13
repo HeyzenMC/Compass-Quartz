@@ -156,14 +156,11 @@ plugins:
     enabled: true
   - source: github:quartz-community/explorer
     enabled: true
-<<<<<<< HEAD
     options:
       title: "Navigation"
       exclude:
         - "Sonstige"
         - "Untitled"
-=======
->>>>>>> 56ee806864a031b27c36b464632b8d7c75e45d15
     layout:
       position: left
       priority: 50
