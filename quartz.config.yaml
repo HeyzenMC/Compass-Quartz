@@ -298,6 +298,12 @@ plugins:
     enabled: true
     order: 50
     options: {}
+  - source: github:HeyzenMC/quartz-exclude-folders
+    enabled: true
+    options:
+      folders:
+        - "Sonstige"
+    order: 5
 layout:
   groups:
     toolbar:
