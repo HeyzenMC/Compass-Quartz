@@ -18,7 +18,7 @@ views:
     order:
       - formula.Neu
     sort:
-      - property: file.name
+      - property: file.folder
         direction: ASC
     imageAspectRatio: 1
     cardSize: 170
