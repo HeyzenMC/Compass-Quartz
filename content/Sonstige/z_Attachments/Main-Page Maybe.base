@@ -9,22 +9,6 @@ properties:
     displayName: Card-Name
 views:
   - type: cards
-    name: Karten 2
-    filters:
-      and:
-        - file.folder.contains("Compass")
-        - '!file.name.contains("Compass")'
-        - folderNote == true
-    order:
-      - formula.Neu
-    sort:
-      - property: file.folder
-        direction: ASC
-    imageAspectRatio: 1
-    cardSize: 200
-    rowHeight: medium
-    image: note.Cover
-  - type: cards
     name: Karten
     filters:
       and:
@@ -37,10 +21,9 @@ views:
       - property: file.name
         direction: ASC
     imageAspectRatio: 1
-    cardSize: 150
+    cardSize: 170
     rowHeight: medium
     image: note.Cover
-    imageFit: contain
   - type: table
     name: Tabelle
     filters:
@@ -51,6 +34,8 @@ views:
     order:
       - formula.Neu
     sort:
+      - property: Folder
+        direction: DESC
       - property: file.name
         direction: ASC
   - type: list
