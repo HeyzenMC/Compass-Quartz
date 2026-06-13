@@ -12,7 +12,6 @@ configuration:
     - private
     - templates
     - .obsidian
-    - Sonstige
   theme:
     fontOrigin: googleFonts
     cdnCaching: true
@@ -159,6 +158,9 @@ plugins:
     enabled: true
     options:
       title: "Navigation"
+      exclude:
+        - "Sonstige"
+        - "Untitled"
     layout:
       position: left
       priority: 50
