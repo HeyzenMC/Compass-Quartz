@@ -3,7 +3,7 @@
 
 > [!infobox|right wikipedia]+
 > # Heading
-> ![[Image.png]]
+> ![[image.png]]
 > ###### Heading 6
 > | Table Header |  Table Header |
 > | ---- | --- |
