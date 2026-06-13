@@ -23,8 +23,12 @@ body {
   font-family: 'Inclusive Sans', sans-serif !important;
 }
 
-h1, h2, h3, h4, h5, h6, .header, .title {
+h1, h2, h3, h4, h5, h6, .header, .title, .page-title, .folder-title, .explorer-folder-title {
   font-family: 'Cinzel', serif !important;
   font-weight: 700 !important;
   letter-spacing: 0.02em;
+}
+
+.article-title {
+  display: none !important;
 }
