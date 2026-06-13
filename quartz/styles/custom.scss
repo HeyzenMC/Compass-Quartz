@@ -53,3 +53,8 @@ h1, h2, h3, h4, h5, h6, .header, .title, h2.page-title a, .folder-title, .explor
 a.internal {
     background-color: #ff4c4c30 !important;
 }
+.explorer {
+    & .explorer-content {
+        &:hover {
+            background-color: #ff4c4c30 !important;
+}
