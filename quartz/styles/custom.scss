@@ -8,13 +8,6 @@ a.internal {
   border-radius: 0 !important;
 }
 
-// Ordner-Namen in anderer Farbe
-.explorer .folder-title,
-.explorer-folder-title {
-  color: #8B2323 !important;
-  font-weight: 600;
-}
-
 .page-listing {
   display: none !important;
 }
@@ -60,4 +53,11 @@ h1, h2, h3, h4, h5, h6, .header, .title, h2.page-title a, .folder-title, .explor
 }
 a.internal.internal-link.bases-card {
   background-color: #ff4c4c30 !important;
+}
+
+// Ordner-Namen in anderer Farbe
+.explorer .folder-title,
+.explorer-folder-title {
+  color: #8B2323 !important;
+  font-weight: 600;
 }
