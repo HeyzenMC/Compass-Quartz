@@ -2,7 +2,10 @@ import { loadQuartzConfig, loadQuartzLayout } from "./quartz/plugins/loader/conf
 import { componentRegistry } from "./quartz/components/registry"
 
 componentRegistry.setOptionOverrides("explorer", {
-  filterFn: (node) => node.slug !== "Sonstige" && !node.slug?.startsWith("Sonstige/"),
+  filterFn: (node) => {
+    const omit = new Set(["sonstige", "tags", "tag index"])
+    return !omit.has(node.displayName.toLowerCase())
+  },
 })
 
 const config = await loadQuartzConfig()
