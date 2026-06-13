@@ -7,12 +7,11 @@ configuration:
   analytics:
     provider: plausible
   locale: en-US
-  baseUrl: heyzenmc.github.io/Compass-Quartz
+  baseUrl: heyzenmc.github.io/Compass-Quartz/
   ignorePatterns:
     - private
     - templates
     - .obsidian
-    - Sonstige
   theme:
     fontOrigin: googleFonts
     cdnCaching: true
@@ -22,14 +21,14 @@ configuration:
       code: IBM Plex Mono
     colors:
       lightMode:
-        light: "#fdf6e3"
-        lightgray: "#eaddc5"
-        gray: "#b8a898"
-        darkgray: "#3a2e26"
-        dark: "#2b1d14"
-        secondary: "#9e2a2b"
-        tertiary: "#d16d6e"
-        highlight: rgba(158, 42, 43, 0.1)
+        light: "#faf8f8"
+        lightgray: "#e5e5e5"
+        gray: "#b8b8b8"
+        darkgray: "#4e4e4e"
+        dark: "#2b2b2b"
+        secondary: "#284b63"
+        tertiary: "#84a59d"
+        highlight: rgba(143, 159, 169, 0.15)
         textHighlight: "#fff23688"
       darkMode:
         light: "#161618"
@@ -98,7 +97,7 @@ plugins:
       renderEngine: katex
     order: 80
   - source: github:quartz-community/citations
-    enabled: false
+    enabled: true
     order: 85
   - source: github:quartz-community/hard-line-breaks
     enabled: true
@@ -127,7 +126,7 @@ plugins:
       unlistWhenEncrypted: false
       outputPath: static/encryptedContentIndex.json
   - source: github:quartz-community/stacked-pages
-    enabled: false
+    enabled: true
     layout:
       position: afterBody
       priority: 50
@@ -157,8 +156,6 @@ plugins:
     enabled: true
   - source: github:quartz-community/explorer
     enabled: true
-    options:
-      title: "Navigation"
     layout:
       position: left
       priority: 50
@@ -182,7 +179,7 @@ plugins:
       priority: 50
     options: {}
   - source: github:quartz-community/article-title
-    enabled: false
+    enabled: true
     layout:
       position: beforeBody
       priority: 10
@@ -267,10 +264,10 @@ plugins:
   - source: github:Requiae/quartz-leaflet-bases-plugin
     enabled: true
     options:
-      enableCopyTool: true
+      enableCopyTool: false
   - source:
       name: quartz-themes
-      repo: github:saberzero1/quartz-themes
+      repo: https://github.com/saberzero1/quartz-themes.git
       subdir: plugin
     enabled: true
     options:
