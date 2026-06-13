@@ -8,5 +8,5 @@ import * as ExternalPlugin from "./.quartz/plugins";
 
 ExternalPlugin.Explorer({
   title: "Navigation",
-  filterFn: (node) => node.displayName !== "Sonstige",
+  filterFn: (node) => node.slug !== "Sonstige" && !node.slug?.startsWith("Sonstige/"),
 });
