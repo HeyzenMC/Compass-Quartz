@@ -53,11 +53,11 @@ h1, h2, h3, h4, h5, h6, .header, .title, h2.page-title a, .folder-title, .explor
     & .explorer-content {
       & .folder-container {
          &:hover {
-              color: #ff4c4c30 !important;
+              background-color: #ff4c4c30 !important;
          }
       }
     }
 }
-a.internal.internal-link.bases-card {
+.bases-card a.internal.internal-link {
   color: #ff4c4c30 !important;
 }
