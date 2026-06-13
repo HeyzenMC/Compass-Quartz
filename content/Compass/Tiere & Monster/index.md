@@ -3,5 +3,6 @@ folderNote: true
 dg-publish: true
 Cover: "[[Dragon Compass.png]]"
 icon: RaTentacle
+publish: true
 ---
 # Tiere & Monster

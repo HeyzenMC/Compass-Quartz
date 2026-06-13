@@ -1,6 +1,7 @@
 ---
 dg-publish: true
 icon: LiSwords
+publish: true
 ---
 # Encounter
 

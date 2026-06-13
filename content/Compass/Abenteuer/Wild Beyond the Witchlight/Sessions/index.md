@@ -1,6 +1,7 @@
 ---
 dg-publish: true
 icon: LiNotebook
+publish: true
 ---
 # Sessions
 

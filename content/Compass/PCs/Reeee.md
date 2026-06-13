@@ -1,5 +1,6 @@
 ---
 dg-publish: true
+publish: true
 ---
 > [!infobox|wikipedia right|relative ws-med]
 > # **Reeee**

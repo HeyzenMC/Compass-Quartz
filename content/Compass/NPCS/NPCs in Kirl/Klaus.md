@@ -1,5 +1,6 @@
 ---
 dg-publish: true
+publish: true
 ---
 Der Anführer der Stadtwache von [[Kirl]] - Oath of Vengeance Paladin - männlicher [[Aasimar]] - Lawful Neutral
 Klaus umgibt irgendwie eine besondere Aura, wenn man ihn sieht

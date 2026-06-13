@@ -1,5 +1,6 @@
 ---
 dg-publish: true
+publish: true
 ---
 ## Gedankenräuber
 

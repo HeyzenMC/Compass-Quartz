@@ -1,5 +1,6 @@
 ---
 dg-publish: true
+publish: true
 ---
 Shelldon ist ein großer [[Tortle]] und der Assistent (und beste Freund) von [[Reeee]] - Sie sind zusammen aufgewachsen, da Reeee von Tortles großgezogen wurde.
 Shelldon ist von dem Buch verflucht worden, weshalb Reeee nach einer Lösung für das Problem sucht.

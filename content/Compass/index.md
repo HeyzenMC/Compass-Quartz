@@ -4,6 +4,7 @@ dg-publish: true
 dg-home: true
 dg-folder-notes: true
 Cover: "[[Compass Icon-Website.png]]"
+publish: true
 ---
 # Compass
 
