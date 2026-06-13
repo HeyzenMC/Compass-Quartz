@@ -32,3 +32,20 @@ h1, h2, h3, h4, h5, h6, .header, .title, h2.page-title a, .folder-title, .explor
 .article-title {
   display: none !important;
 }
+.bases-card {
+  border: 1px solid #000000 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    transform: translateY(-2px);
+  }
+}
+
+.bases-card-title {
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  color: #8B2323;
+}
