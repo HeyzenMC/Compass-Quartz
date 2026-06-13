@@ -159,8 +159,7 @@ plugins:
     options:
       title: "Navigation"
       exclude:
-        - "Sonstige"
-        - "Untitled"
+        - "Sonstige/*"
     layout:
       position: left
       priority: 50
