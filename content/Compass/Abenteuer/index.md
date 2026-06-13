@@ -2,36 +2,16 @@
 folderNote: true
 Cover: "[[Abenteuer-Icon.jpg]]"
 publish: true
+icon: RaTwoDragons
 ---
 # Abenteuer
+%% Begin Waypoint %%
+- **[[Compass/Abenteuer/index.md|Abenteuer]]**
+	- **[[Compass/Abenteuer/Wild Beyond the Witchlight/index.md|Wild Beyond the Witchlight]]**
+		- **[[Compass/Abenteuer/Wild Beyond the Witchlight/Sessions/index.md|Sessions]]**
+			- **[[Compass/Abenteuer/Wild Beyond the Witchlight/Sessions/Encounter/index.md|Encounter]]**
+				- [[Big Top Fight]]
+			- [[Session 1 - Lars und Yvonne]]
+			- [[Session 1 - Planung.canvas]]
 
-
-```folder-overview
-id: ec34ed17-32ac-41de-a26b-e18c39e1ad94
-folderPath: ""
-title: "{{folderName}} overview"
-showTitle: false
-depth: 3
-includeTypes:
-  - folder
-  - markdown
-style: list
-disableFileTag: false
-sortBy: name
-sortByAsc: true
-showEmptyFolders: false
-onlyIncludeSubfolders: false
-storeFolderCondition: true
-showFolderNotes: false
-disableCollapseIcon: true
-alwaysCollapse: false
-autoSync: true
-allowDragAndDrop: true
-hideLinkList: true
-hideFolderOverview: false
-useActualLinks: false
-fmtpIntegration: false
-titleSize: 1
-isInCallout: false
-useWikilinks: true
-```
+%% End Waypoint %%
