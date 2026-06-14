@@ -1,14 +1,13 @@
 ---
-dg-publish: true
-publish: true
+tags:
+  - icon-🏙️
 ---
 # Orte
 
 > [!infobox|wikipedia right|relative ws-med]
 > # Orte Übersicht 
->%% Begin Waypoint %%
+>%% Begin Landmark %%
 >- **[[Compass/Kontinente/Orte/index.md|Orte]]**
->	- [[Kirl]]
+>	- **[[Compass/Kontinente/Orte/Kirl/index.md|Kirl]]**
 >
->%% End Waypoint %%
-
+>%% End Landmark %%

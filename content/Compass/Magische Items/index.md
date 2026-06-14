@@ -6,6 +6,7 @@ icon: FasWandMagicSparkles
 publish: true
 tags:
   - icon-🪄
+card_link: "[[Compass/Magische Items/index|Magische Items]]"
 ---
 # Magische Items
 

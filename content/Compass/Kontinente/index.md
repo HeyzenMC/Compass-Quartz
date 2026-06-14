@@ -5,7 +5,8 @@ Cover: "[[Compass First Draft.jpg]]"
 icon: LiGlobe2
 publish: true
 tags:
-- icon-🌐
+  - icon-🌐
+card_link: "[[Compass/Kontinente/index|Kontinente]]"
 ---
 # Kontinente
 
@@ -14,6 +15,7 @@ tags:
 >%% Begin Waypoint %%
 >- **[[Compass/Kontinente/index.md|Kontinente]]**
 >	- **[[Compass/Kontinente/Orte/index.md|Orte]]**
+>		- **[[Compass/Kontinente/Orte/Kirl/index.md|Kirl]]**
 >
 >%% End Waypoint %%
 

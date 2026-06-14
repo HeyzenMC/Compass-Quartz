@@ -24,8 +24,7 @@
 		{"id":"51bfa4beadfeceb6","type":"text","text":"**Halblinge - Festivalbesucher**","x":1473,"y":951,"width":287,"height":50,"color":"5"},
 		{"id":"7a71d6e70926289e","type":"text","text":"**3-5**","x":1351,"y":951,"width":122,"height":50,"color":"5"},
 		{"id":"8cdc48e1fed5f032","type":"text","text":"1-3","x":1020,"y":10,"width":250,"height":60,"color":"5"},
-		{"id":"eb6e2f05c1d745f2","type":"text","text":"### ENCOUNTER","x":1348,"y":-580,"width":250,"height":60,"color":"5"},
-		{"id":"1cb1ccbf726d7345","type":"file","file":"Sonstige/z_Attachments/kirl.png","x":233,"y":-1208,"width":327,"height":488}
+		{"id":"eb6e2f05c1d745f2","type":"text","text":"### ENCOUNTER","x":1348,"y":-580,"width":250,"height":60,"color":"5"}
 	],
 	"edges":[
 		{"id":"f7dd86ff8d519b63","fromNode":"17a1642450834adb","fromSide":"bottom","toNode":"9eea7af441621928","toSide":"top"},
@@ -41,14 +40,22 @@
 		{"id":"a8e43da317737536","fromNode":"92631e86fe1e2575","fromSide":"bottom","toNode":"d447431276115c23","toSide":"right"},
 		{"id":"d8c98f6e89b2ee83","toFloating":false,"fromNode":"d447431276115c23","fromSide":"bottom","toNode":"111645f214e0d3af","toSide":"bottom"},
 		{"id":"f8cde37ced5ff5a2","fromNode":"d447431276115c23","fromSide":"bottom","toNode":"10e54501df0b2825","toSide":"top"},
-		{"id":"b5fadf508958eb67","toFloating":false,"fromNode":"3c9c7b12ff20b01b","fromSide":"bottom","toNode":"92631e86fe1e2575","toSide":"left"},
 		{"id":"541a04db4cd1d6b5","fromNode":"10e54501df0b2825","fromSide":"bottom","toNode":"573683ef80e8c322","toSide":"top"},
 		{"id":"2e06f70ef604bb57","fromNode":"10e54501df0b2825","fromSide":"right","toNode":"3d0ae61b042ddafc","toSide":"left"},
 		{"id":"c5df11b24257b53e","fromNode":"3d0ae61b042ddafc","fromSide":"bottom","toNode":"573683ef80e8c322","toSide":"right"},
 		{"id":"44f687a223f5924d","fromNode":"3d0ae61b042ddafc","fromSide":"top","toNode":"0455563a6ae8764b","toSide":"bottom"},
 		{"id":"2d1006b590092b32","fromNode":"eb6e2f05c1d745f2","fromSide":"right","toNode":"5becdbf9b49a7890","toSide":"right"},
 		{"id":"38ac126d8e276a6e","fromNode":"eb6e2f05c1d745f2","fromSide":"right","toNode":"51bfa4beadfeceb6","toSide":"right"},
-		{"id":"875caa6df7e33fc4","fromNode":"5becdbf9b49a7890","fromSide":"bottom","toNode":"8cdc48e1fed5f032","toSide":"left"}
+		{"id":"875caa6df7e33fc4","fromNode":"5becdbf9b49a7890","fromSide":"bottom","toNode":"8cdc48e1fed5f032","toSide":"left"},
+		{
+			"id":"592feadc2dcc4726",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"3c9c7b12ff20b01b",
+			"fromSide":"bottom",
+			"toNode":"92631e86fe1e2575",
+			"toSide":"left"
+		}
 	],
 	"metadata":{
 		"version":"1.0-1.0",

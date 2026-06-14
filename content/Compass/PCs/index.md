@@ -4,8 +4,9 @@ dg-publish: true
 Cover: "[[D20 Compass.png]]"
 icon: 🎲
 publish: true
-tags: 
-- icon-🎲
+tags:
+  - icon-🎲
+card_link: "[[Compass/PCs/index|PCs]]"
 ---
 # PCs
 

@@ -9,7 +9,7 @@ publish: true
 > | Name |  [[Reeee]] |
 > | ----- | ----- |
 > | **Rolle** | Player Character |
-> | **Ort** | [[Kirl]] |
+> | **Ort** | [[Orte/Kirl/index|Kirl]] |
 > | **Fraktion** | ? |
 > | **Status** | 🟢 Lebendig |
 > | **Alignment** | Chaotic Good |

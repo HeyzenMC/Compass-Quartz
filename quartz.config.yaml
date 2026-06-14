@@ -157,7 +157,7 @@ plugins:
   - source: github:quartz-community/explorer
     enabled: true
     options:
-      title: "Navigation"
+      title: Navigation
     layout:
       position: left
       priority: 50
@@ -266,7 +266,11 @@ plugins:
   - source: github:Requiae/quartz-leaflet-bases-plugin
     enabled: true
     options:
-      enableCopyTool: false
+      enableCopyTool: true
+  - source: github:quartz-community/external-quartz-leaflet-map-plugin
+    enabled: false
+    options:
+      enableCopyTool: true
   - source:
       name: quartz-themes
       repo: https://github.com/saberzero1/quartz-themes.git
@@ -287,7 +291,7 @@ plugins:
     options: {}
     order: 50
   - source: github:quartz-community/obsidian-plugin-ttrpg-tools-maps
-    enabled: true
+    enabled: false
     order: 50
     options:
       blockLanguage: zoommap
@@ -302,7 +306,7 @@ plugins:
     enabled: true
     options:
       folders:
-        - "Sonstige"
+        - Sonstige
     order: 5
 layout:
   groups:

@@ -6,6 +6,7 @@ icon: 🐾
 publish: true
 tags:
   - icon-🐾
+card_link: "[[Compass/Tiere & Monster/index|Tiere & Monster]]"
 ---
 # Tiere & Monster
 

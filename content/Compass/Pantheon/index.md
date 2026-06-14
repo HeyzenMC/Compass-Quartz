@@ -6,6 +6,7 @@ icon: FasBuildingColumns
 publish: true
 tags:
   - icon-🏛️
+card_link: "[[Compass/Pantheon/index|Pantheon]]"
 ---
 # Pantheon
 

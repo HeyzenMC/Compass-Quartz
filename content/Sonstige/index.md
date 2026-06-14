@@ -19,7 +19,6 @@
 >		- [[image.png]]
 >		- [[kirl.png]]
 >		- [[Magic Staff.png]]
->		- [[Main-Page Maybe.base|Main-Page Maybe]]
 >		- [[Meph Stey.png]]
 >		- [[olymp.png]]
 >		- [[Pasted image 20260608125131.png]]
@@ -33,8 +32,12 @@
 >		- [[Session 1 - Planung 1.canvas]]
 >		- [[Token für Ramy.png]]
 >		- [[Witchlight Carnival Battle.jpg]]
+>	- **[[Sonstige/z_Bases/index.md|z_Bases]]**
+>		- [[Kirl-Karte.base|Kirl-Karte]]
+>		- [[Main-Page Maybe.base|Main-Page Maybe]]
 >	- **z_Templates**
 >		- [[Bild-Datei]]
+>		- [[Card-Link Template]]
 >		- [[Cards-Vorlage]]
 >		- [[Custom Monster Statblock]]
 >		- [[Folder-Note Übersicht Infobox]]

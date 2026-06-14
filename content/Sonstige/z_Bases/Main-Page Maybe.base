@@ -3,10 +3,17 @@ filters:
     - folderNote == true
 formulas:
   Untitled: ""
-  Neu: file.folder.replace(/.*\//, "")
+  Neu: link(file.path, file.folder.replace(/.*\//, ""))
+  Untitled 2: html('<span style="background:#7a2e2e;color:#fff;padding:2px 6px;border-radius:4px">' + note.kategorie + '</span>')
+  Wikilink für Quartz: '"[[" + file.path.replace(".md", "") + "|" + file.folder.replace(/.*\//, "") + "]]"'
+  card_link: card_link
 properties:
   formula.Neu:
     displayName: Card-Name
+  formula.Untitled 2:
+    displayName: Badge
+  formula.card_link:
+    displayName: Übersicht
 views:
   - type: cards
     name: Karten
@@ -32,22 +39,7 @@ views:
         - file.folder.contains("Compass")
         - '!file.name.contains("Compass")'
     order:
-      - formula.Neu
-    sort:
-      - property: Folder
-        direction: DESC
-      - property: file.name
-        direction: ASC
-  - type: list
-    name: Liste
-    filters:
-      and:
-        - folderNote == true
-        - '!file.name.contains("Compass")'
-        - file.folder.contains("Compass")
-    order:
-      - formula.Neu
+      - formula.card_link
     sort:
       - property: file.folder
         direction: ASC
-    rowHeight: medium

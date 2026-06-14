@@ -1,0 +1,12 @@
+views:
+  - type: leaflet-map
+    name: Karte
+    order: []
+    image: Sonstige/z_Attachments/kirl.png
+    height: 560
+    defaultZoom: -2
+    minZoom: -2
+    scale: "1"
+    maxZoom: 2
+    zoomDelta: 0.5
+    mapName: Kirl

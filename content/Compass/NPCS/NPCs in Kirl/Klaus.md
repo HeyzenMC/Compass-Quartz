@@ -2,12 +2,12 @@
 dg-publish: true
 publish: true
 ---
-Der Anführer der Stadtwache von [[Kirl]] - Oath of Vengeance Paladin - männlicher [[Aasimar]] - Lawful Neutral
+Der Anführer der Stadtwache von [[Orte/Kirl/index|Kirl]] - Oath of Vengeance Paladin - männlicher [[Aasimar]] - Lawful Neutral
 Klaus umgibt irgendwie eine besondere Aura, wenn man ihn sieht
 
 Er nutzt den Vorwand [[Pixel]] wegen ihrer Bücher zu verhaften, allerdings ist er eigentlich auf der Suche nach dem Buch [[Dusk]], da er dessen Fähigkeiten kennt.
 
-Klaus hat von der gleichen Person den anonymen Tipp bekommen, weshalb er sich in [[Kirl]] als Befehlshaber der Stadtwache beworben hat.
+Klaus hat von der gleichen Person den anonymen Tipp bekommen, weshalb er sich in [[Orte/Kirl/index|Kirl]] als Befehlshaber der Stadtwache beworben hat.
 
 Klaus möchte das Buch benutzen, um Straftäter für immer mit dem Fluch zu plagen - Er will auf keinen Fall, dass der Fluch gebrochen wird.
 

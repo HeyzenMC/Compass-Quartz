@@ -1,5 +1,5 @@
-$attachments = "C:\Obsidian\Compass\z_Attachments"
-$output = "C:\Obsidian\Compass\UPLOAD-NOTE.md"
+$attachments = "C:\Obsidian\Compass\Sonstige\z_Attachments"
+$output = "C:\Obsidian\Compass\Sonstige\UPLOAD-NOTE.md"
 
 $content = "---`ndg-publish: true`ndg-hide: true`n---`n`n"
 $exts = @("*.png","*.jpg","*.jpeg","*.webp","*.gif","*.svg")

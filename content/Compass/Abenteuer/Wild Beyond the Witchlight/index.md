@@ -3,6 +3,8 @@ folderNote: false
 dg-publish: true
 icon: RaFairyWand
 publish: true
+tags:
+  - icon-🎇
 ---
 # Wild Beyond the Witchlight
 

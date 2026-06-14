@@ -7,7 +7,8 @@ Cover: "[[Compass Icon-Website.png]]"
 publish: true
 asdasdw:
 tags:
-- icon-🧭
+  - icon-🧭
+card_link: "[[Compass/index|Compass]]"
 ---
 # Compass
 

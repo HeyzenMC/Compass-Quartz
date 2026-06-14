@@ -7,6 +7,7 @@ icon: 🧬
 publish: true
 tags:
   - icon-🧬
+card_link: "[[Compass/Rassen/index|Rassen]]"
 ---
 
 # Rassen

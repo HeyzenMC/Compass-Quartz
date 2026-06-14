@@ -5,6 +5,7 @@ publish: true
 icon: RaTwoDragons
 tags:
   - icon-🪁
+card_link: "[[Compass/Abenteuer/index|Abenteuer]]"
 ---
 # Abenteuer
 

@@ -6,6 +6,7 @@ icon: FasPerson
 publish: true
 tags:
   - icon-👥
+card_link: "[[Compass/NPCS/index|NPCS]]"
 ---
 # NPCs
 
@@ -14,11 +15,6 @@ tags:
 >%% Begin Waypoint %%
 >- **[[Compass/NPCS/index.md|NPCS]]**
 >	- **[[Compass/NPCS/NPCs in Kirl/index.md|NPCs in Kirl]]**
->		- [[Klaus]]
->		- [[Mister Light]]
->		- [[Mister Witch]]
->		- [[Shelldon]]
->		- [[Tea]]
 >	- [[Mephe Stey]]
 >
 >%% End Waypoint %%

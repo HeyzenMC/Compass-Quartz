@@ -6,6 +6,7 @@ icon: RaCircleOfCircles
 publish: true
 tags:
   - icon-🌀
+card_link: "[[Compass/Dimensionen/index|Dimensionen]]"
 ---
 # Dimensionen
 

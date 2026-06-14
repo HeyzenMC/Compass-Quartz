@@ -43,13 +43,11 @@ h1, h2, h3, h4, h5, h6, .header, .title, h2.page-title a, .folder-title, .explor
   color: #8B2323;
 }
 .explorer {
-    & .explorer-content {
       & .folder-button {
          &:hover {
               background-color: #ff4c4c30 !important;
          }
       }
-    }
 }
 a.internal.internal-link.bases-card {
   background-color: #ff4c4c30 !important;
@@ -58,6 +56,11 @@ a.internal.internal-link.bases-card {
 // Ordner-Namen in anderer Farbe
 .explorer .folder-title,
 .explorer-folder-title {
-  color: #8B2323 !important;
+  color: #CC1A00 !important;
   font-weight: 600;
+  font-size: 16
+}
+/* 1. Versteckt den "Link to original" in eingebetteten Notizen */
+.transclude a.internal {
+    display: none !important;
 }
