@@ -19,13 +19,15 @@ publish: true
 > | **Persönlichkeit** |  |
 > 
 > # Verbindungen
-> -  ###### Organisationen
+> -  #### Organisationen
 > 	- [[Luxmaxxer]]
 > 	- Händlergilde
-> - ###### Personen
+> 
+> - #### Personen
 > 	- [[Shelldon]]
 > 	- [[Gorgle]]
 > 	- [[Pixel]]
+> 
 > # Andere Beschäftigungen
 > - [[Luxmaxxer|Luxmaxxing]]
 > - Gemischtwarenhändler
