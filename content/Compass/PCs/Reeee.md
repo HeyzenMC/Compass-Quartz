@@ -19,7 +19,7 @@ publish: true
 > | **Persönlichkeit** |  |
 > 
 > # Verbindungen
-> -  #### Organisationen
+> - #### Organisationen
 > 	- [[Luxmaxxer]]
 > 	- Händlergilde
 > 
