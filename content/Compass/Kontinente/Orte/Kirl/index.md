@@ -23,7 +23,7 @@ views:
     order:
       - file.name
     mapName: Kirl
-    image: z_Attachments/kirl.png
+    image: kirl.png
     height: 700
     minZoom: -2
     maxZoom: 2

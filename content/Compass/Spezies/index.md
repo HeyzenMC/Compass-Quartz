@@ -7,15 +7,15 @@ icon: 🧬
 publish: true
 tags:
   - icon-🧬
-card_link: "[[Compass/Rassen/index|Rassen]]"
+card_link: "[[Compass/Spezies/index|Spezies]]"
 ---
 
-# Rassen
+# Spezies
 
 > [!infobox|wikipedia right|relative ws-med]
-> # Rassen Übersicht 
+> # Spezies Übersicht 
 >%% Begin Waypoint %%
->- **[[Compass/Rassen/index.md|Rassen]]**
+>- **[[Compass/Spezies/index|Spezies]]**
 >	- [[Aasimar]]
 >	- [[Goblin]]
 >	- [[Lizardfolk]]

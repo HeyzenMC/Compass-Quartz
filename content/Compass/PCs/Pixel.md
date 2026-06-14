@@ -9,7 +9,7 @@ publish: true
 > | Name | [[Pixel]] |
 > | --------- | --------- |
 > | **Rolle** | Player Character |
-> | **Ort** | [[Orte/Kirl/index|Kirl]] |
+> | **Ort** | [[Orte/Kirl/index\|Kirl]] |
 > | **Status** | 🟢 Lebendig |
 > | **Gesinnung** |  |
 > | **Rasse** | [[Lizardfolk]] (Krokodil) |

@@ -5,31 +5,35 @@ publish: true
 > [!infobox|wikipedia right|relative ws-med]
 > # **Reeee**
 > ![[Reeee Token.png]]
-> ###### Heading 6
+> ###### -
 > | Name |  [[Reeee]] |
 > | ----- | ----- |
-> | **Rolle** | Player Character |
-> | **Ort** | [[Orte/Kirl/index|Kirl]] |
-> | **Fraktion** | ? |
+> | **Spieler:In** | <kbd>LARS</kbd> |
+> | **Titel** | - |
+> | **Ort** | [[Orte/Kirl/index\|Kirl]] |
 > | **Status** | 🟢 Lebendig |
-> | **Alignment** | Chaotic Good |
 > | **Rasse** | [[Goblin]] |
 > | **Geschlecht** | Männlich |
 > | **Alter** | 17 |
-> | **Klasse / Stufe** | Schurke / 1 |
-> | **Beziehung zu ?** |  |
+> | **Klasse/n** | Schurke <kbd>LVL 2</kbd> |
 > | **Persönlichkeit** |  |
 > 
-> # Heading 1
-> - Bullet list
-> 	- Testing
-> 	- Testing
-> - Testing
+> # Verbindungen
+> -  ###### Organisationen
+> 	- [[Luxmaxxer]]
+> 	- Händlergilde
+> - ###### Personen
+> 	- [[Shelldon]]
+> 	- [[Gorgle]]
+> 	- [[Pixel]]
+> # Andere Beschäftigungen
+> - [[Luxmaxxer|Luxmaxxing]]
+> - Gemischtwarenhändler
 
 
 
 ## 🧭 Übersicht
-**Name:** {{title}}  
+**Name:** {{}}  
 **Rolle:**  
 **Ort:**  
 **Fraktion:**  
@@ -73,7 +77,7 @@ publish: true
 **Besondere Fähigkeiten:**  
 - 
 - 
-
+`LVL 2`
 **Zauber (falls relevant):**  
 - 
 

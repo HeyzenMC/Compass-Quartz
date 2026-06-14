@@ -15,6 +15,7 @@
 >		- [[D20 Compass.png]]
 >		- [[Dora.png]]
 >		- [[Dragon Compass.png]]
+>		- [[Factions-Cover.jpg]]
 >		- [[image-1.png]]
 >		- [[image.png]]
 >		- [[kirl.png]]
@@ -41,10 +42,11 @@
 >		- [[Cards-Vorlage]]
 >		- [[Custom Monster Statblock]]
 >		- [[Folder-Note Übersicht Infobox]]
+>		- [[Leaflet-Map-Template]]
 >		- [[Location-Template]]
 >		- [[NPC Vorlage]]
 >		- [[Tabs-Vorlage]]
->		- [[Title-Template|<% tp.file.folder(true).split("/").pop() %>]]
+>		- [[Title-Template|<% tp.file.folder(tru[[Leaflet-Map-Template]]).pop() %>]]
 >		- [[Wikipedia-Template]]
 >	- **ZoomMap**
 >		- **[[Sonstige/ZoomMap/SVGs/index.md|SVGs]]**

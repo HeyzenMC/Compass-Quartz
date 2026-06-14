@@ -15,6 +15,12 @@ card_link: "[[Compass/NPCS/index|NPCS]]"
 >%% Begin Waypoint %%
 >- **[[Compass/NPCS/index.md|NPCS]]**
 >	- **[[Compass/NPCS/NPCs in Kirl/index.md|NPCs in Kirl]]**
+>		- [[Klaus]]
+>		- [[Mister Light]]
+>		- [[Mister Witch]]
+>		- [[Shelldon]]
+>		- [[Tea]]
+>	- [[Gorgle]]
 >	- [[Mephe Stey]]
 >
 >%% End Waypoint %%

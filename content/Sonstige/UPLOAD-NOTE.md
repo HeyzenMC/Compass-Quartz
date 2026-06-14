@@ -24,5 +24,6 @@ dg-hide: true
 ![[Token für Ramy.png]]
 ![[Abenteuer-Icon.jpg]]
 ![[Compass First Draft.jpg]]
+![[Factions-Cover.jpg]]
 ![[Witchlight Carnival Battle.jpg]]
 

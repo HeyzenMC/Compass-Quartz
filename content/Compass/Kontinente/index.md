@@ -5,7 +5,7 @@ Cover: "[[Compass First Draft.jpg]]"
 icon: LiGlobe2
 publish: true
 tags:
-  - icon-🌐
+  - icon-🌍
 card_link: "[[Compass/Kontinente/index|Kontinente]]"
 ---
 # Kontinente
