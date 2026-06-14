@@ -4,6 +4,8 @@ dg-publish: true
 Cover: "[[olymp.png]]"
 icon: FasBuildingColumns
 publish: true
+tags:
+  - icon-🏛️
 ---
 # Pantheon
 

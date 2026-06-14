@@ -4,6 +4,8 @@ dg-publish: true
 Cover: "[[Pentagram.png]]"
 icon: RaCircleOfCircles
 publish: true
+tags:
+  - icon-🌀
 ---
 # Dimensionen
 

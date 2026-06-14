@@ -5,6 +5,8 @@ dg-folder-notes: true
 Cover: "[[Races Compass.png]]"
 icon: 🧬
 publish: true
+tags:
+  - icon-🧬
 ---
 
 # Rassen

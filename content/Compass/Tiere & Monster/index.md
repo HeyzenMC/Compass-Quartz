@@ -4,6 +4,8 @@ dg-publish: true
 Cover: "[[Dragon Compass.png]]"
 icon: 🐾
 publish: true
+tags:
+  - icon-🐾
 ---
 # Tiere & Monster
 

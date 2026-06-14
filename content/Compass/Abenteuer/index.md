@@ -3,6 +3,8 @@ folderNote: true
 Cover: "[[Abenteuer-Icon.jpg]]"
 publish: true
 icon: RaTwoDragons
+tags:
+  - icon-🪁
 ---
 # Abenteuer
 
