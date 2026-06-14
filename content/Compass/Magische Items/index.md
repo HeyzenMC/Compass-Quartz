@@ -6,3 +6,12 @@ icon: FasWandMagicSparkles
 publish: true
 ---
 # Magische Items
+
+> [!infobox|wikipedia right|relative ws-med]
+> # Magische Items Übersicht 
+>%% Begin Waypoint %%
+>- **[[Compass/Magische Items/index.md|Magische Items]]**
+>	- [[Dusk]]
+>
+>%% End Waypoint %%
+

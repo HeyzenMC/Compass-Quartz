@@ -2,7 +2,15 @@
 folderNote: true
 dg-publish: true
 Cover: "[[Dragon Compass.png]]"
-icon: RaTentacle
+icon: 🐾
 publish: true
 ---
 # Tiere & Monster
+
+> [!infobox|wikipedia right|relative ws-med]
+> # Tiere & Monster Übersicht 
+>%% Begin Waypoint %%
+>- **[[Compass/Tiere & Monster/index.md|Tiere & Monster]]**
+>
+>%% End Waypoint %%
+
