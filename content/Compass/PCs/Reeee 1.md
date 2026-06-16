@@ -2,12 +2,15 @@
 dg-publish: true
 publish: true
 ---
-> [!infobox|wikipedia right|relative ws-med]
+
+> [!infobox|wikipedia right static wm-sm]
+> <div class="infobox-color" style="--infobox-accent: #008718; --table-text-color: #000000; --infobox-border-color: #000000; --infobox-alt-bg: transparent; --infobox-header-color: #000000;">
+> 
 > # **Reeee**
 > ![[Reeee Token.png]]
 > ###### -
-> | Name |  [[Reeee]] |
-> | ----- | ----- |
+>| Name | [[Reeee]] |
+> | ----- | ---- |
 > | **Spieler:In** | <kbd>LARS</kbd> |
 > | **Titel** | - |
 > | **Ort** | [[Orte/Kirl/index\|Kirl]] |
@@ -17,6 +20,7 @@ publish: true
 > | **Alter** | 17 |
 > | **Klasse/n** | Schurke <kbd>LVL 2</kbd> |
 > | **Persönlichkeit** |  |
+>
 > # Verbindungen
 > - #### Organisationen
 > 	- [[Luxmaxxer]]
@@ -30,6 +34,11 @@ publish: true
 > # Andere Beschäftigungen
 > - [[Luxmaxxer|Luxmaxxing]]
 > - Gemischtwarenhändler
+> 
+> </div>
+
+
+
 
 
 ## 🧭 Übersicht

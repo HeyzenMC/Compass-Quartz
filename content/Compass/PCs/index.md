@@ -15,6 +15,7 @@ card_link: "[[Compass/PCs/index|PCs]]"
 >%% Begin Waypoint %%
 >- **[[Compass/PCs/index.md|PCs]]**
 >	- [[Pixel]]
+>	- [[Reeee 1]]
 >	- [[Reeee]]
 >
 >%% End Waypoint %%

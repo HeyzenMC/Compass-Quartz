@@ -9,7 +9,7 @@ card_link: "[[Compass/Abenteuer/index|Abenteuer]]"
 ---
 # Abenteuer
 
-> [!infobox|wikipedia right|relative]
+> [!infobox|wikipedia right|relative ws-med]
 > # Abenteuer Übersicht 
 >%% Begin Waypoint %%
 >- **[[Compass/Abenteuer/index.md|Abenteuer]]**

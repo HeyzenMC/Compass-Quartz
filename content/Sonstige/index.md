@@ -42,11 +42,12 @@
 >		- [[Cards-Vorlage]]
 >		- [[Custom Monster Statblock]]
 >		- [[Folder-Note Übersicht Infobox]]
+>		- [[Inventar-Template]]
 >		- [[Leaflet-Map-Template]]
 >		- [[Location-Template]]
 >		- [[NPC Vorlage]]
 >		- [[Tabs-Vorlage]]
->		- [[Title-Template|<% tp.file.folder(tru[[Leaflet-Map-Template]]).pop() %>]]
+>		- [[Title-Template|<% tp.file.folder(true).split("/").pop() %>]]
 >		- [[Wikipedia-Template]]
 >	- **ZoomMap**
 >		- **[[Sonstige/ZoomMap/SVGs/index.md|SVGs]]**

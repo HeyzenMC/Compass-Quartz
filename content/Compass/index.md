@@ -10,7 +10,7 @@ tags:
   - icon-🧭
 card_link: "[[Compass/index|Compass]]"
 ---
-# Compass
+
 
 ![[Main-Page Maybe.base]]
 

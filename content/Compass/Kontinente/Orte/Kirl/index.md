@@ -34,11 +34,11 @@ views:
 
 ```
 
-> [!infobox|right wmed]
+> [!infobox|right wmed s-t]-  Biblio
 > # [[Bibliothek von Kirl]]
 > ![[Bibliothek von Kirl#Beschreibung]]
 
->[!infobox|right wmed]
+>[!infobox|right wmed]-
 > # [[Marktplatz von Kirl]]
 > ![[Marktplatz von Kirl#Beschreibung]]
 
