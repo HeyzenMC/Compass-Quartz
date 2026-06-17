@@ -34,15 +34,15 @@ views:
 
 ```
 
-> [!infobox|right wmed s-t]-  Biblio
+> [!infobox|right wmed s-t]-  [[Bibliothek von Kirl]]
 > # [[Bibliothek von Kirl]]
 > ![[Bibliothek von Kirl#Beschreibung]]
 
->[!infobox|right wmed]-
+>[!infobox|right wmed s-t]- Marktplatz von Kirl
 > # [[Marktplatz von Kirl]]
 > ![[Marktplatz von Kirl#Beschreibung]]
 
->[!infobox|right wmed]
+>[!infobox|right wmed s-t]- Stadtwache von Kirl 
 > # [[Stadtwache von Kirl]]
 > ![[Stadtwache von Kirl#Beschreibung]]
 

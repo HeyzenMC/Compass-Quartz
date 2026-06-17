@@ -10,7 +10,7 @@ publish: true
 
 
 >[!infobox|left ws-med]
->## **Session-Zusammenfassung**
+>## Session-Zusammenfassung
 > - [[Session 1 - Lars und Yvonne]] 
 > -
 > -
@@ -22,7 +22,7 @@ publish: true
 > 
 
 >[!infobox|right ws-med]
->## **Session-Planungs-Canvas**
+>## Session-Planungs-Canvas
 > - [[Session 1 - Planung.canvas]] 
 > -
 > -

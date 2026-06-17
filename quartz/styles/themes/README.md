@@ -1,13 +1,13 @@
-# Tokyo Night
+# ITS Theme
 
-- Theme: Tokyo Night
-- Author: tcmmichaelb139
+- Theme: ITS Theme
+- Author: <a href="https://github.com/SlRvb" target="_blank" rel="noopener noreferrer">SlRvb</a>
 
 ## Preview
 
-[Open live preview (Quartz)](https://quartz-themes.github.io/tokyo-night/)
+[Open live preview (Quartz)](https://quartz-themes.github.io/its-theme.ttrpg-wotc/)
 
-[Open live preview (Publish)](https://publish.saberzero.one/tokyo-night)
+[Open live preview (Publish)](https://publish.saberzero.one/its-theme.ttrpg-wotc)
 
 ## Usage (Quartz)
 
@@ -15,7 +15,7 @@
 
 ```yaml
 env:
-  THEME_NAME: tokyo-night
+  THEME_NAME: its-theme.ttrpg-wotc
 ```
 
 ```yaml
@@ -28,7 +28,7 @@ env:
 ```bash
 curl -s -S -o action.sh https://raw.githubusercontent.com/saberzero1/quartz-themes/master/action.sh
 
-./action.sh tokyo-night
+./action.sh its-theme.ttrpg-wotc
 ```
 
 ### Manual install

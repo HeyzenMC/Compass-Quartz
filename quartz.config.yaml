@@ -15,10 +15,11 @@ configuration:
   theme:
     fontOrigin: googleFonts
     cdnCaching: true
+    useThemeFonts: false
     typography:
       header: Cinzel
-      body: Inclusive Sans
-      code: IBM Plex Mono
+      body: EB Garamond
+      code: JetBrains Mono
     colors:
       lightMode:
         light: "#faf8f8"
@@ -41,6 +42,13 @@ configuration:
         highlight: rgba(143, 159, 169, 0.15)
         textHighlight: "#b3aa0288"
 plugins:
+  - source: github:saberzero1/quartz-themes
+    name: quartz-themes
+    repo: https://github.com/saberzero1/quartz-themes.git
+    subdir: plugin
+    enabled: true
+    options:
+      theme: its-theme.ttrpg-wotc
   - source: github:quartz-community/created-modified-date
     enabled: true
     options:
@@ -61,17 +69,7 @@ plugins:
   - source: github:quartz-community/obsidian-flavored-markdown
     enabled: true
     options:
-      comments: true
-      highlight: true
-      wikilinks: true
-      callouts: true
-      mermaid: true
-      parseTags: true
-      parseArrows: true
-      parseBlockReferences: true
       enableInHtmlEmbed: false
-      enableYouTubeEmbed: true
-      enableVideoEmbed: true
       enableCheckbox: true
     order: 30
   - source: github:quartz-community/github-flavored-markdown
@@ -100,7 +98,7 @@ plugins:
     enabled: false
     order: 85
   - source: github:quartz-community/hard-line-breaks
-    enabled: true
+    enabled: false
     order: 90
   - source: github:quartz-community/ox-hugo
     enabled: false
@@ -110,27 +108,16 @@ plugins:
     order: 92
   - source: github:quartz-community/fonts
     enabled: true
+    options:
+      useThemeFonts: false
+      fontOrigin: googleFonts
+      header: Cinzel
+      body: EB Garamond
+      code: JetBrains Mono
   - source: github:quartz-community/remove-draft
     enabled: true
   - source: github:quartz-community/explicit-publish
     enabled: false
-  - source: github:quartz-community/unlisted-pages
-    enabled: true
-    options: {}
-    order: 45
-  - source: github:quartz-community/encrypted-pages
-    enabled: true
-    options:
-      iterations: 600000
-      passwordField: password
-      unlistWhenEncrypted: false
-      outputPath: static/encryptedContentIndex.json
-  - source: github:quartz-community/stacked-pages
-    enabled: false
-    layout:
-      position: afterBody
-      priority: 50
-      display: all
   - source: github:quartz-community/alias-redirects
     enabled: true
   - source: github:quartz-community/content-index
@@ -142,12 +129,10 @@ plugins:
     enabled: true
   - source: github:quartz-community/og-image
     enabled: true
-    options: {}
   - source: github:quartz-community/cname
     enabled: true
   - source: github:quartz-community/canvas-page
     enabled: true
-    options: {}
   - source: github:quartz-community/content-page
     enabled: true
   - source: github:quartz-community/folder-page
@@ -156,8 +141,6 @@ plugins:
     enabled: true
   - source: github:quartz-community/explorer
     enabled: true
-    options:
-      title: Navigation
     layout:
       position: left
       priority: 50
@@ -179,9 +162,8 @@ plugins:
     layout:
       position: right
       priority: 50
-    options: {}
   - source: github:quartz-community/article-title
-    enabled: false
+    enabled: true
     layout:
       position: beforeBody
       priority: 10
@@ -227,11 +209,9 @@ plugins:
       position: afterBody
       priority: 10
   - source: github:quartz-community/footer
-    enabled: true
+    enabled: false
     options:
-      links:
-        GitHub: https://github.com/jackyzha0/quartz
-        Discord Community: https://discord.gg/cRFFHYye7t
+      links: null
   - source: github:quartz-community/recent-notes
     enabled: false
   - source: github:quartz-community/spacer
@@ -263,22 +243,46 @@ plugins:
       position: beforeBody
       priority: 15
       display: all
-  - source: github:Requiae/quartz-leaflet-bases-plugin
+  - source: github:quartz-community/unlisted-pages
+    enabled: true
+    options: {}
+    order: 45
+  - source: github:quartz-community/encrypted-pages
     enabled: true
     options:
-      enableCopyTool: true
-  - source: github:quartz-community/external-quartz-leaflet-map-plugin
+      iterations: 600000
+      passwordField: password
+      unlistWhenEncrypted: false
+      outputPath: static/encryptedContentIndex.json
+    order: 900
+    layout:
+      position: body
+      priority: 100
+      display: all
+  - source: github:quartz-community/stacked-pages
     enabled: false
-    options:
-      enableCopyTool: true
-  - source:
-      name: quartz-themes
-      repo: https://github.com/saberzero1/quartz-themes.git
-      subdir: plugin
+    layout:
+      position: afterBody
+      priority: 50
+      display: all
+  - source: github:HeyzenMC/quartz-exclude-folders
     enabled: true
     options:
-      theme: its-theme.ttrpg-wotc
-      mode: both
+      folders:
+        - Sonstige
+    order: 5
+  - source: github:quartz-community/obsidian-plugin-leaflet
+    enabled: true
+    options: {}
+    order: 50
+    layout:
+      position: right
+      priority: 50
+  - source: github:quartz-community/external-quartz-leaflet-map-plugin
+    enabled: true
+    options:
+      enableCopyTool: false
+    order: 50
   - source: github:quartz-community/obsidian-plugin-excalidraw
     enabled: true
     options:
@@ -286,28 +290,6 @@ plugins:
       darkMode: auto
       exportPadding: 20
     order: 50
-  - source: github:quartz-community/tui
-    enabled: true
-    options: {}
-    order: 50
-  - source: github:quartz-community/obsidian-plugin-ttrpg-tools-maps
-    enabled: false
-    order: 50
-    options:
-      blockLanguage: zoommap
-      inlineBlockHeaderId: ZOOMMAP-DATA
-      maxInlineDataBytes: 0
-      defaultIconKey: pin-red
-  - source: github:quartz-community/obsidian-plugin-leaflet
-    enabled: true
-    order: 50
-    options: {}
-  - source: github:HeyzenMC/quartz-exclude-folders
-    enabled: true
-    options:
-      folders:
-        - Sonstige
-    order: 5
 layout:
   groups:
     toolbar:
@@ -320,11 +302,14 @@ layout:
         beforeBody: []
         left: []
         right: []
+    content: {}
     folder:
       exclude:
         - reader-mode
       positions:
-        right: []
+        right:
+          - graph
+          - backlinks
     tag:
       exclude:
         - reader-mode
@@ -332,4 +317,3 @@ layout:
         right: []
     canvas: {}
     bases: {}
-    content: {}

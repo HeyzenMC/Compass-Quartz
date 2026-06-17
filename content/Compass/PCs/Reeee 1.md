@@ -91,12 +91,12 @@ publish: true
 > [!inventar]- Inventar
 > <div style="display: flex; gap: 10px; flex-wrap: wrap;">
 > 
->> [!ausruestung] Ausrüstung
+>> [!ausruestung]- Ausrüstung
 >> * Langschwert +1
 >> * Dolch
 >> * [[Dusk]]
 >
->> [!misc] Gemischt
+>> [!misc]- Gemischt
 >> * Seil (15m)
 >> * Fackel (3x)
 >> * Pistole
@@ -104,7 +104,7 @@ publish: true
 >> * wkladndw
 >> * Eine wunderbare riesige Granate
 >
->> [!quest] Key-Items
+>> [!quest]- Key-Items
 >> * Mysteriöser Obsidian-Schlüssel
 >
 > </div>

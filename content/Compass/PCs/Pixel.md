@@ -3,7 +3,7 @@ dg-publish: true
 publish: true
 ---
 > [!infobox|wikipedia right|relative ws-med]
-> # Pixel Token
+> # **Pixel Token**
 > ![[Pixel Token.png|300]]
 > ###### Heading 6
 > | Name | [[Pixel]] |

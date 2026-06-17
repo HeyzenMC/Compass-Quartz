@@ -8,7 +8,7 @@ REM You would typically download the .bat file and run it.
 REM Using curl like in bash requires curl to be installed and is less common for .bat execution.
 REM Example:
 REM curl -O https://raw.githubusercontent.com/saberzero1/quartz-themes/master/action.bat
-REM action.bat <its-theme-ttrpg-wotc>
+REM action.bat <THEME_NAME>
 
 REM Color codes are not directly supported in standard CMD. Echoing messages plainly.
 echo [INFO] Starting theme setup...

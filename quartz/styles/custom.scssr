@@ -2,272 +2,6 @@
 
 // put your custom CSS here!
 
-
-// Breadcrumb-Links (die anklickbaren Teile)
-.breadcrumb-container .breadcrumb-element a {
-  color: #C4457A33 !important;
-  font-size: 14px !important;
-}
-
-// Der Trenner zwischen den Elementen (das "›"-Zeichen)
-.breadcrumb-container .breadcrumb-element span {
-  color: #8B2323 !important;
-  font-size: 14px !important;
-}
-
-// "Jun 13, 2026 · 1 min read"
-.content-meta {
-  display: none !important;
-}
-
-// Tags-Leiste oben auf manchen Seiten
-.tags {
-  display: none !important;
-}
-
-
-// "Für Smartphone"
-@media (max-width: 768px) {
-  // Sidebars auf Mobile komplett verstecken
-  #quartz-body > .sidebar.left,
-  #quartz-body > .sidebar.right {
-    display: none !important;
-  }
-
-  // Content nimmt volle Breite ein
-  .page > #quartz-body .center {
-    max-width: 100% !important;
-    padding: 0 1rem !important;
-  }
-
-  // Explorer-Schrift auf Mobile etwas kleiner
-  .nav-file-title, .folder-title {
-    font-size: 14px !important;
-  }
-}
-
-@media (min-width: 1500px) {
-  // Äußerer Root: zentriert und begrenzt die Gesamtbreite
-  div#quartz-root.page {
-    max-width: 1800px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    width: 100% !important;
-  }
-
-  // Normales 3-Spalten-Layout nur für Nicht-Canvas-Seiten
-  div#quartz-root.page:not([data-frame="canvas"]) {
-    & div#quartz-body {
-      width: 100% !important;
-      max-width: 70% !important;
-      grid-template-columns: 320px 1fr 280px !important;
-    }
-  }
-  // Normales 3-Spalten-Layout nur für Nicht-Excalidraw-Seiten
-  div#quartz-root.page:not([data-frame="excalidraw"]) {
-    & div#quartz-body {
-      width: 100% !important;
-      max-width: 70% !important;
-      grid-template-columns: 320px 1fr 280px !important;
-    }
-  }
-
-  // Canvas-Seiten: Sidebar + Stage nebeneinander, volle Höhe
-  div#quartz-root.page[data-frame="canvas"] {
-    & div#quartz-body {
-      width: 100% !important;
-      max-width: 100% !important;
-    }
-
-    // Canvas bekommt mehr Platz für die Stage
-    .canvas-frame {
-      width: 100% !important;
-      max-width: 100% !important;
-    }
-
-    .canvas-sidebar {
-      min-width: 260px !important;
-      max-width: 320px !important;
-      flex-shrink: 0 !important;
-    }
-
-    .canvas-stage {
-      flex: 1 1 auto !important;
-      min-width: 0 !important;
-      width: 100% !important;
-    }
-  }
-
-  // Excalidraw-Seiten: Sidebar + Stage nebeneinander, volle Höhe
-  div#quartz-root.page[data-frame="excalidraw"] {
-    & div#quartz-body {
-      width: 100% !important;
-      max-width: 100% !important;
-    }
-
-    // Excalidraw bekommt mehr Platz für die Stage
-    .excalidraw-frame {
-      width: 100% !important;
-      max-width: 100% !important;
-    }
-
-    .excalidraw-sidebar {
-      min-width: 260px !important;
-      max-width: 320px !important;
-      flex-shrink: 0 !important;
-    }
-
-    .excalidraw-stage {
-      flex: 1 1 auto !important;
-      min-width: 0 !important;
-      width: 100% !important;
-    }
-  }
-}
-
-
-// ===== Canvas-Page fixes (geräteunabhängig) =====
-// Verhindert, dass die Stage unsichtbar/abgeschnitten wird
-div#quartz-root.page[data-frame="canvas"] {
-  // Body-Grid auf Canvas deaktivieren
-  & div#quartz-body {
-    display: block !important;
-  }
- 
-  // Canvas-Frame füllt den verfügbaren Platz
-  .canvas-frame {
-    display: flex !important;
-    width: 100% !important;
-    height: calc(100vh - 0px) !important;
-    overflow: hidden !important;
-  }
- 
-  // Stage soll sichtbar und scrollbar sein
-  .canvas-stage {
-    display: block !important;
-    flex: 1 !important;
-    overflow: hidden !important;
-    position: relative !important;
-  }
- 
-  .canvas-container {
-    width: 100% !important;
-    height: 100% !important;
-  }
-}
-
-// ===== Excalidraw-Page fixes (geräteunabhängig) =====
-// Verhindert, dass die Stage unsichtbar/abgeschnitten wird
-div#quartz-root.page[data-frame="excalidraw"] {
-  // Body-Grid auf Canvas deaktivieren
-  & div#quartz-body {
-    display: block !important;
-  }
- 
-  // Canvas-Frame füllt den verfügbaren Platz
-  .excalidraw-frame {
-    display: flex !important;
-    width: 100% !important;
-    height: calc(100vh - 0px) !important;
-    overflow: hidden !important;
-  }
- 
-  // Stage soll sichtbar und scrollbar sein
-  .excalidraw-stage {
-    display: block !important;
-    flex: 1 !important;
-    overflow: hidden !important;
-    position: relative !important;
-  }
- 
-  .excalidraw-container {
-    width: 100% !important;
-    height: 100% !important;
-  }
-}
-
-
-/* Transclude-Blockquotes innerhalb von Callouts resetten */
-.callout blockquote.transclude {
-  border-left: none;
-  border-right: none;
-  margin: 0;
-  padding: 0;
-  background: none;
-}
-
-h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-  font-family: Cinzel, serif !important;
-}
-.nav-file-title, .folder-title {
-    font-size: 16px !important;
-}
-  #quartz-body > .sidebar.left {
-    display: flex !important;
-    width: 100% !important;
-    padding: 0.5rem 0.5rem 0.5rem 0.25rem !important; // links weniger Abstand
-  }
-
-  // Explorer-Container selbst
-  .explorer {
-    width: 100% !important;
-    padding-left: 0 !important;
-  }
-
-  // Seitentitel "Compass" oben
-  .page-title {
-    font-size: 2rem !important;
-  }
-
-  // Ordner-Namen (Abenteuer, Dimensionen, ...)
-  .explorer .folder-title,
-  .explorer-folder-title {
-    font-size: 1.1rem !important;
-  }
-
-  // Artikel-Namen (Klaus, Mister Light, ...)
-  .explorer .nav-file-title {
-    font-size: 1rem !important;
-  }
-
-  // "Untitled 1" / "Untitled" ganz unten (root-level files)
-  .explorer > ul > li > .nav-file-title {
-    font-size: 1rem !important;
-    color: #888 !important;
-  }
-
-
-.breadcrumb-container breadcrumb-element {
-  color: #9ADBF5 !important;
-}
-
-h2.page-title a,
-.page-title a {
-  color: #8B2323 !important;   /* Dein dunkles Rot — pass den Wert nach Geschmack an */
-  font-size: 30px !important;
-}
-
-// regular text
-a, p, i, em, del, .text-highlight, .match-tag, blockquote, .search-button, .search-space > *, table, figcaption, input[type="text"] {
-  font-family: EB Garamond !important;
-  font-size: 18px !important;
-  font-weight: 500 !important;
-  color: #000000 !important;
-}
-
-// Bold explizit schützen
-b, strong, .explorer .nav-file-title {
-  font-family: EB Garamond !important;
-  color: #000000 !important;
-  font-weight: 700 !important;
-}
-.folder-container, a.internal {
-  font-family: EB Garamond !important;
-  color: #C75C44 !important;
-  font-weight: 600 !important;
-  font-size: 18px !important;
-}
-
 a.internal {
   background-color: transparent !important;
   padding: 0 !important;
@@ -510,29 +244,6 @@ a.internal.internal-link.bases-card {
   display: none !important;
 }
 
-.callout.callout.callout.callout[data-callout="infobox"][data-callout-metadata~="s-t"] {
-
-  /* Das Info-Icon */
-  .callout-icon {
-    display: block !important;
-    background-color: #ababab !important;
-    mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjEwIi8+PHBhdGggZD0iTTEyIDE2di00Ii8+PHBhdGggZD0iTTEyIDhoLjAxIi8+PC9zdmc+');
-    -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjEwIi8+PHBhdGggZD0iTTEyIDE2di00Ii8+PHBhdGggZD0iTTEyIDhoLjAxIi8+PC9zdmc+');
-    mask-repeat: no-repeat;
-    -webkit-mask-repeat: no-repeat;
-    mask-size: 18px 18px;
-    -webkit-mask-size: 18px 18px;
-    mask-position: 50% 50%;
-    -webkit-mask-position: 50% 50%;
-    width: 20px;
-    height: 20px;
-  }
-
-  /* Der Falt-Pfeil rechts */
-  .callout-fold {
-    background-color: #ababab !important;
-  }
-}
 /* ===== Individuelle Hex-Farben pro Infobox ===== */
 
 .callout.callout[data-callout~=infobox] {
@@ -592,11 +303,166 @@ a.internal.internal-link.bases-card {
   color: #000000;
 }
 
+.callout {
+  &[data-callout="ausruestung"] {
+  /* Custom Variables */
+    --color: #99230b;
+    --callout-color: #99230b;
+    --callout-title-color: #99230b;
+    --callout-icon: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXN3b3JkLWljb24gbHVjaWRlLXN3b3JkIj48cGF0aCBkPSJtMTEgMTktNi02Ii8+PHBhdGggZD0ibTUgMjEtMi0yIi8+PHBhdGggZD0ibTggMTYtNCA0Ii8+PHBhdGggZD0iTTkuNSAxNy41IDIxIDZWM2gtM0w2LjUgMTQuNSIvPjwvc3ZnPg==');
+    border-width: 2px !important;
+    border-style: solid !important;
+    border-color: #99230b !important;
+    border-radius: 5px !important;
+
+    background-color: #FFFFFF33 !important;
+
+    ul {
+      list-style: none !important;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      padding: 0 !important;
+      margin: 0.5rem 0 0 0 !important;
+    }
+
+    li {
+      list-style: none !important;
+      margin: 0 !important;
+      background-color: #FFECA133;
+      border: 1px solid rgba(138, 109, 29, 0.3);
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-size: 0.9rem;
+
+      &::marker, &::before {
+        content: none !important;
+      }
+    }
+  }
+}
+.callout {
+  &[data-callout="inventar"] {
+    --color: #c9a227;
+    --callout-color: #c9a227 !important;   // RGB-Tripel statt Hex! (= #c9a227)
+    --callout-title-color: #c9a227 !important;  // hat schon funktioniert, beibehalten
+    --callout-icon: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23c9a227%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M4%2010a4%204%200%200%201%204-4h8a4%204%200%200%201%204%204v10a2%202%200%200%201-2%202H6a2%202%200%200%201-2-2zm4%200h8m-8%208h8%22/%3E%3Cpath%20d%3D%22M8%2022v-6a2%202%200%200%201%202-2h4a2%202%200%200%201%202%202v6M9%206V4a2%202%200%200%201%202-2h2a2%202%200%200%201%202%202v2%22/%3E%3C/svg%3E');
+
+    border-width: 2px !important;
+    border-style: solid !important;
+    border-color: #c9a227 !important; // = #8a6d1d
+    border-radius: 5px !important;
+
+    background-color: #FFECA133 !important;
+
+    ul {
+      list-style: none !important;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      padding: 0 !important;
+      margin: 0.5rem 0 0 0 !important;
+    }
+
+    li {
+      list-style: none !important;
+      margin: 0 !important;
+      background-color: #c9a22733;
+      border: 2px solid #c9a22780;
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-size: 0.9rem;
+
+      &::marker, &::before {
+        content: none !important;
+      }
+    }
+  }
+}
+.callout {
+  &[data-callout="misc"] {
+  /* Custom Variables */
+    --color: #007000;
+    --callout-color: #007000;
+    --callout-title-color: #007000;
+    --callout-icon: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWZsYXNrLWNvbmljYWwtaWNvbiBsdWNpZGUtZmxhc2stY29uaWNhbCI+PHBhdGggZD0iTTE0IDJ2NmEyIDIgMCAwIDAgLjI0NS45Nmw1LjUxIDEwLjA4QTIgMiAwIDAgMSAxOCAyMkg2YTIgMiAwIDAgMS0xLjc1NS0yLjk2bDUuNTEtMTAuMDhBMiAyIDAgMCAwIDEwIDhWMiIvPjxwYXRoIGQ9Ik02LjQ1MyAxNWgxMS4wOTQiLz48cGF0aCBkPSJNOC41IDJoNyIvPjwvc3ZnPg==');
+    border-width: 2px !important;
+    border-style: solid !important;
+    border-color: #007000 !important;
+    border-radius: 5px !important;
+
+    background-color: #FFFFFF33 !important;
+
+    ul {
+      list-style: none !important;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      padding: 0 !important;
+      margin: 0.5rem 0 0 0 !important;
+    }
+
+    li {
+      list-style: none !important;
+      margin: 0 !important;
+      background-color: #c9a22733;
+      border: 2px solid #c9a22780;
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-size: 0.9rem;
+
+      &::marker, &::before {
+        content: none !important;
+      }
+    }
+  }
+}
+.callout {
+  &[data-callout="quest"] {
+  /* Custom Variables */
+    --color: #949494;
+    --callout-color: #949494;
+    --callout-title-color: #949494;
+    --callout-icon: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIxLjc1IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWtleS1pY29uIGx1Y2lkZS1rZXkiPjxwYXRoIGQ9Im0xNS41IDcuNSAyLjMgMi4zYTEgMSAwIDAgMCAxLjQgMGwyLjEtMi4xYTEgMSAwIDAgMCAwLTEuNEwxOSA0Ii8+PHBhdGggZD0ibTIxIDItOS42IDkuNiIvPjxjaXJjbGUgY3g9IjcuNSIgY3k9IjE1LjUiIHI9IjUuNSIvPjwvc3ZnPg==');
+    border-width: 2px !important;
+    border-style: solid !important;
+    border-color: #949494 !important;
+    border-radius: 5px !important;
+
+    background-color: #FFFFFF33 !important;
+
+    ul {
+      list-style: none !important;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      padding: 0 !important;
+      margin: 0.5rem 0 0 0 !important;
+    }
+
+    li {
+      list-style: none !important;
+      margin: 0 !important;
+      background-color: #c9a22733;
+      border: 2px solid #c9a22780;
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-size: 0.9rem;
+
+      &::marker, &::before {
+        content: none !important;
+      }
+    }
+  }
+}
+
+
+
 /* cyrillic-ext */
 @font-face {
   font-family: "EB Garamond";
   font-style: normal;
-  font-weight: 400 900;
+  font-weight: 400;
   src: url(https://fonts.gstatic.com/s/ebgaramond/v30/SlGDmQSNjdsmc35JDF1K5E55YMjF_7DPuGi-6_RkCY9_WamXgHlIbvw.woff2)
     format("woff2");
   unicode-range:
@@ -606,7 +472,7 @@ a.internal.internal-link.bases-card {
 @font-face {
   font-family: "EB Garamond";
   font-style: normal;
-  font-weight: 400 900;
+  font-weight: 400;
   src: url(https://fonts.gstatic.com/s/ebgaramond/v30/SlGDmQSNjdsmc35JDF1K5E55YMjF_7DPuGi-6_RkAI9_WamXgHlIbvw.woff2)
     format("woff2");
   unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
@@ -615,7 +481,7 @@ a.internal.internal-link.bases-card {
 @font-face {
   font-family: "EB Garamond";
   font-style: normal;
-  font-weight: 400 900;
+  font-weight: 400;
   src: url(https://fonts.gstatic.com/s/ebgaramond/v30/SlGDmQSNjdsmc35JDF1K5E55YMjF_7DPuGi-6_RkCI9_WamXgHlIbvw.woff2)
     format("woff2");
   unicode-range: U+1F00-1FFF;
@@ -624,7 +490,7 @@ a.internal.internal-link.bases-card {
 @font-face {
   font-family: "EB Garamond";
   font-style: normal;
-  font-weight: 400 900;
+  font-weight: 400;
   src: url(https://fonts.gstatic.com/s/ebgaramond/v30/SlGDmQSNjdsmc35JDF1K5E55YMjF_7DPuGi-6_RkB49_WamXgHlIbvw.woff2)
     format("woff2");
   unicode-range:
@@ -634,7 +500,7 @@ a.internal.internal-link.bases-card {
 @font-face {
   font-family: "EB Garamond";
   font-style: normal;
-  font-weight: 400 900;
+  font-weight: 400;
   src: url(https://fonts.gstatic.com/s/ebgaramond/v30/SlGDmQSNjdsmc35JDF1K5E55YMjF_7DPuGi-6_RkC49_WamXgHlIbvw.woff2)
     format("woff2");
   unicode-range:
@@ -646,18 +512,23 @@ a.internal.internal-link.bases-card {
 @font-face {
   font-family: "EB Garamond";
   font-style: normal;
-  font-weight: 400 800;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/ebgaramond/v30/SlGFmQSNjdsmc35JDF1K5GRwUjcdlttVFm-rI7e8QL9.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/ebgaramond/v30/SlGDmQSNjdsmc35JDF1K5E55YMjF_7DPuGi-6_RkCo9_WamXgHlIbvw.woff2)
+    format("woff2");
+  unicode-range:
+    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+    U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
-
 /* latin */
 @font-face {
   font-family: "EB Garamond";
   font-style: normal;
-  font-weight: 400 800;
-  font-display: swap;
-  src: url(https://fonts.gstatic.com/s/ebgaramond/v30/SlGFmQSNjdsmc35JDF1K5GRwUjcdlttVFm-rI7e8QL9.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/ebgaramond/v30/SlGDmQSNjdsmc35JDF1K5E55YMjF_7DPuGi-6_RkBI9_WamXgHlI.woff2)
+    format("woff2");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
 }

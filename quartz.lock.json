@@ -115,6 +115,12 @@
       "commit": "a2dfd1373abe58ace461ebea0b4e94cb287f894e",
       "installedAt": "2026-06-03T13:32:35.808Z"
     },
+    "external-quartz-leaflet-map-plugin": {
+      "source": "github:quartz-community/external-quartz-leaflet-map-plugin",
+      "resolved": "https://github.com/quartz-community/external-quartz-leaflet-map-plugin.git",
+      "commit": "6807e4397f2d78cb569c8c15ea55db2b6c1c6b1c",
+      "installedAt": "2026-06-16T20:49:27.120Z"
+    },
     "favicon": {
       "source": "github:quartz-community/favicon",
       "resolved": "https://github.com/quartz-community/favicon.git",
@@ -179,19 +185,13 @@
       "source": "github:quartz-community/obsidian-plugin-excalidraw",
       "resolved": "https://github.com/quartz-community/obsidian-plugin-excalidraw.git",
       "commit": "dad0a4c0abdc8b3c2786277a2cbd67dc039c754c",
-      "installedAt": "2026-06-03T13:32:35.851Z"
+      "installedAt": "2026-06-17T15:35:10.272Z"
     },
     "obsidian-plugin-leaflet": {
       "source": "github:quartz-community/obsidian-plugin-leaflet",
       "resolved": "https://github.com/quartz-community/obsidian-plugin-leaflet.git",
       "commit": "d67052661cf39342b13094c2c560b1275d395504",
-      "installedAt": "2026-06-11T18:41:37.631Z"
-    },
-    "obsidian-plugin-ttrpg-tools-maps": {
-      "source": "github:quartz-community/obsidian-plugin-ttrpg-tools-maps",
-      "resolved": "https://github.com/quartz-community/obsidian-plugin-ttrpg-tools-maps.git",
-      "commit": "c43314724a7606dd18b90972c457f593ccded5f5",
-      "installedAt": "2026-06-11T18:41:37.601Z"
+      "installedAt": "2026-06-16T20:49:07.018Z"
     },
     "og-image": {
       "source": "github:quartz-community/og-image",
@@ -211,22 +211,11 @@
       "commit": "a1c1fe0a9c6a5ce1acf6efa01d473a7d9850e2a3",
       "installedAt": "2026-06-03T13:32:36.002Z"
     },
-    "quartz-leaflet-bases-plugin": {
-      "source": "github:Requiae/quartz-leaflet-bases-plugin",
-      "resolved": "https://github.com/Requiae/quartz-leaflet-bases-plugin.git",
-      "commit": "48da13cf01ba6d742e616da2e837fd2a9478ac79",
-      "installedAt": "2026-06-11T10:46:13.489Z"
-    },
-    "quartz-themes": {
-      "source": {
-        "name": "quartz-themes",
-        "repo": "github:saberzero1/quartz-themes",
-        "subdir": "plugin"
-      },
-      "resolved": "https://github.com/saberzero1/quartz-themes.git",
-      "commit": "945135e8b70576753d0591e1713fe56553100b3d",
-      "subdir": "plugin",
-      "installedAt": "2026-06-11T15:54:28.274Z"
+    "quartz-exclude-folders": {
+      "source": "github:HeyzenMC/quartz-exclude-folders",
+      "resolved": "https://github.com/HeyzenMC/quartz-exclude-folders.git",
+      "commit": "c70e06cd7598b4df49c8c7070cffb8d238f0b80a",
+      "installedAt": "2026-06-16T19:34:01.095Z"
     },
     "reader-mode": {
       "source": "github:quartz-community/reader-mode",
@@ -293,12 +282,6 @@
       "resolved": "https://github.com/quartz-community/tag-page.git",
       "commit": "eabf3eec55c0bab7f49e69957341f34d2ae3c5a1",
       "installedAt": "2026-06-03T13:32:36.377Z"
-    },
-    "tui": {
-      "source": "github:quartz-community/tui",
-      "resolved": "https://github.com/quartz-community/tui.git",
-      "commit": "d1d51a626ef84a6f4d0933cce2b834a9db92282b",
-      "installedAt": "2026-06-11T18:41:37.572Z"
     },
     "unlisted-pages": {
       "source": "github:quartz-community/unlisted-pages",
