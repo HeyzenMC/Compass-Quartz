@@ -26,50 +26,103 @@
 }
 
 
-// "Für Smartphone"
+// =====================================================================
+// RESPONSIVE LAYOUT – alle Breakpoints
+// =====================================================================
+
+// --- Smartphone (< 768 px) -------------------------------------------
 @media (max-width: 768px) {
-  // Sidebars auf Mobile komplett verstecken
+  // Beide Sidebars komplett ausblenden
   #quartz-body > .sidebar.left,
   #quartz-body > .sidebar.right {
     display: none !important;
   }
 
-  // Content nimmt volle Breite ein
+  // Content nutzt volle Breite
   .page > #quartz-body .center {
     max-width: 100% !important;
     padding: 0 1rem !important;
   }
 
-  // Explorer-Schrift auf Mobile etwas kleiner
+  // Infobox auf Mobile: volle Breite, kein Abschneiden
+  .callout[data-callout="infobox"] {
+    max-width: 100% !important;
+    float: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
   .nav-file-title, .folder-title {
     font-size: 14px !important;
   }
 }
 
+// --- Tablet / kleiner Desktop (769 px – 1099 px) ---------------------
+// Quartz blendet hier die rechte Sidebar meist schon selbst aus.
+// Wir stellen sicher, dass die linke Sidebar schmal bleibt
+// und der Content möglichst viel Platz bekommt.
+@media (min-width: 769px) and (max-width: 1099px) {
+  div#quartz-root.page:not([data-frame="canvas"]):not([data-frame="excalidraw"]) {
+    & div#quartz-body {
+      // Schmale linke Sidebar, Center bekommt den Rest, rechte Sidebar weg
+      grid-template-columns: 200px 1fr 0px !important;
+    }
+  }
+
+  // Rechte Sidebar bei dieser Breite verstecken
+  #quartz-body > .sidebar.right {
+    display: none !important;
+  }
+
+  // Infobox: auf Tablet etwas kleiner als Desktop, aber nicht abschneidend
+  .callout[data-callout="infobox"] {
+    max-width: 55% !important;
+    min-width: 220px !important;
+  }
+}
+
+// --- Mittlerer Desktop (1100 px – 1499 px) ---------------------------
+// Beide Sidebars vorhanden, aber schlank. Center bekommt mehr Raum.
+@media (min-width: 1100px) and (max-width: 1499px) {
+  div#quartz-root.page:not([data-frame="canvas"]):not([data-frame="excalidraw"]) {
+    & div#quartz-body {
+      // Schmalere Sidebars → Center wächst automatisch
+      grid-template-columns: 250px 1fr 250px !important;
+      // Kein max-width-Limit → nutzt die volle Fensterbreite
+      max-width: 100% !important;
+    }
+  }
+
+  .callout[data-callout="infobox"] {
+    max-width: 42% !important;
+    min-width: 240px !important;
+  }
+}
+
+// --- Großer Desktop (≥ 1500 px) --------------------------------------
 @media (min-width: 1500px) {
-  // Äußerer Root: zentriert und begrenzt die Gesamtbreite
+  // Äußerer Root: zentriert, aber nicht zu breit
   div#quartz-root.page {
-    max-width: 1800px !important;
+    max-width: 2000px !important;
     margin-left: auto !important;
     margin-right: auto !important;
     width: 100% !important;
   }
 
-  // Normales 3-Spalten-Layout nur für Nicht-Canvas-Seiten
-  div#quartz-root.page:not([data-frame="canvas"]) {
+  // Normales 3-Spalten-Layout (kein künstliches 70%-Limit mehr!)
+  div#quartz-root.page:not([data-frame="canvas"]):not([data-frame="excalidraw"]) {
     & div#quartz-body {
       width: 100% !important;
-      max-width: 70% !important;
-      grid-template-columns: 320px 1fr 280px !important;
+      max-width: 100% !important;            // vorher: 70% → das war der Hauptübeltäter
+      grid-template-columns: 260px 1fr 240px !important;
     }
   }
-  // Normales 3-Spalten-Layout nur für Nicht-Excalidraw-Seiten
-  div#quartz-root.page:not([data-frame="excalidraw"]) {
-    & div#quartz-body {
-      width: 100% !important;
-      max-width: 70% !important;
-      grid-template-columns: 320px 1fr 280px !important;
-    }
+
+  .callout[data-callout="infobox"] {
+    max-width: 38% !important;
+    min-width: 260px !important;
   }
 
   // Canvas-Seiten: Sidebar + Stage nebeneinander, volle Höhe
@@ -78,19 +131,15 @@
       width: 100% !important;
       max-width: 100% !important;
     }
-
-    // Canvas bekommt mehr Platz für die Stage
     .canvas-frame {
       width: 100% !important;
       max-width: 100% !important;
     }
-
     .canvas-sidebar {
       min-width: 260px !important;
       max-width: 320px !important;
       flex-shrink: 0 !important;
     }
-
     .canvas-stage {
       flex: 1 1 auto !important;
       min-width: 0 !important;
@@ -104,19 +153,15 @@
       width: 100% !important;
       max-width: 100% !important;
     }
-
-    // Excalidraw bekommt mehr Platz für die Stage
     .excalidraw-frame {
       width: 100% !important;
       max-width: 100% !important;
     }
-
     .excalidraw-sidebar {
       min-width: 260px !important;
       max-width: 320px !important;
       flex-shrink: 0 !important;
     }
-
     .excalidraw-stage {
       flex: 1 1 auto !important;
       min-width: 0 !important;
@@ -488,17 +533,30 @@ a.internal.internal-link.bases-card {
 /* Repariert die Infoboxen / Callouts */
 .callout[data-callout="infobox"] {
   /* Verhindert die Transparenz - nutzt die Quartz-Standard-Hintergrundfarbe */
-  background-color: var(--light) !important; 
+  background-color: var(--light) !important;
 
-/* Entfernt die blauen Akzentstriche */
-  border: none !important; 
+  /* Entfernt die blauen Akzentstriche */
+  border: none !important;
   border-left: none !important;
-  
+
   /* Verhindert, dass Text und Linien in die Box rutschen */
   z-index: 10;
   margin-top: 1.5em;
   margin-bottom: 1.5em;
-  padding: 0.2em;
+  padding: 0 0.2em;
+
+  /* Responsive Breite – kein festes max-width: 40% mehr.
+     Die Breakpoints oben steuern das je nach Bildschirmgröße. */
+  min-width: 200px;
+  box-sizing: border-box;
+
+  /* Text in Infobox-Zellen bricht um statt abzuschneiden */
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  word-break: break-word !important;
+
+  /* Tabellen in Infoboxen nie überlaufen lassen */
+  overflow-x: hidden !important;
 }
 /* Blendet die kaputten blauen Icon-Striche komplett aus */
 .callout[data-callout="infobox"] .callout-icon {
@@ -573,12 +631,20 @@ a.internal.internal-link.bases-card {
   border-left: 0px solid var(--infobox-border-color, transparent) !important;
   border-right: 0px solid var(--infobox-border-color, transparent) !important;
   border-top: 1px solid var(--infobox-border-color, transparent) !important;
+  /* Text umbricht statt abzuschneiden */
+  white-space: normal !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
 }
 
 /* --- ZEBRA-MUSTER (ABWECHSELNDE ZEILEN) ANPASSEN --- */
 /* Überschreibt die automatische, bräunliche Hintergrundfarbe für jede zweite Zeile */
 .callout.callout[data-callout~=infobox] > .callout-content > .infobox-color table {
   --table-row-alt-background: var(--infobox-alt-bg, transparent) !important;
+  /* Tabelle nutzt volle Breite der Infobox, kein Überlauf */
+  width: 100% !important;
+  table-layout: auto !important;
+  overflow-x: hidden !important;
 }
 .callout.callout.callout.callout:is([data-callout-metadata~=s-t],
 [data-callout-metadata~=show-title]) > .callout-title {
@@ -660,4 +726,33 @@ a.internal.internal-link.bases-card {
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/ebgaramond/v30/SlGFmQSNjdsmc35JDF1K5GRwUjcdlttVFm-rI7e8QL9.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+// =====================================================================
+// LINKE SIDEBAR – kompakteres Padding, damit mehr Platz für den Content
+// =====================================================================
+#quartz-body > .sidebar.left {
+  padding: 0.5rem 0.25rem 0.5rem 0.25rem !important; // rechts noch weniger Abstand
+  overflow-x: hidden !important;                      // kein horizontaler Scroll
+}
+
+// =====================================================================
+// RECHTE SIDEBAR – Inhalte umbrechen statt überlaufen
+// =====================================================================
+#quartz-body > .sidebar.right {
+  overflow-x: hidden !important;
+  word-break: break-word !important;
+}
+
+// =====================================================================
+// CENTER / CONTENT-BEREICH – verhindert, dass er unter den Sidebars verschwindet
+// =====================================================================
+#quartz-body > .center {
+  min-width: 0 !important;       // erlaubt dem Grid, die Mitte zu verkleinern
+  overflow-x: hidden !important; // kein horizontaler Scroll im Artikel
+}
+
+// Content-Wrapper selbst soll max-width ausschöpfen
+.popover-hint {
+  max-width: 100% !important;
 }

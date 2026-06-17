@@ -4,7 +4,7 @@ publish: true
 ---
 
 > [!infobox|wikipedia right static wm-sm]
-> <div class="infobox-color" style="--infobox-accent: #008718; --table-text-color: #000000; --infobox-border-color: #000000; --infobox-alt-bg: transparent; --infobox-header-color: #000000;">
+> <div class="infobox-color" style="--infobox-accent: #008718; --table-text-color: #000000; --infobox-border-color: #000000; --infobox-alt-bg: #transparent; --infobox-header-color: #000000;">
 > 
 > # **Reeee**
 > ![[Reeee Token.png]]
