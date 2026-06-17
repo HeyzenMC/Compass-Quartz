@@ -1,11 +1,13 @@
-> [!infobox|wikipedia right static wm-sm]
-> <div class="infobox-color" style="--infobox-accent: #008718; --table-text-color: #000000; --infobox-border-color: #000000; --infobox-alt-bg: #transparent; --infobox-header-color: #000000;">
+
+
+> [!infobox|wikipedia ws-med]
+> <div class="infobox-color" style="--infobox-accent: #00871833; --table-text-color: #000000; --infobox-border-color: #000000; --infobox-alt-bg: transparent; --infobox-header-color: #000000;">
 > 
 > # **Reeee**
 > ![[Reeee Token.png]]
 > ###### -
->| Name | [[Reeee]] |
-> | ----- | ---- |
+> | Name |  [[Reeee]] |
+> | ----- | ----- |
 > | **Spieler:In** | <kbd>LARS</kbd> |
 > | **Titel** | - |
 > | **Ort** | [[Orte/Kirl/index\|Kirl]] |
@@ -31,3 +33,5 @@
 > - Gemischtwarenhändler
 > 
 > </div>
+
+

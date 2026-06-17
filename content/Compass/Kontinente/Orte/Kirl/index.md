@@ -24,7 +24,8 @@ views:
       - file.name
     mapName: Kirl
     image: kirl.png
-    height: 700
+    height: 800
+    width: 200
     minZoom: -2
     maxZoom: 2
     defaultZoom: -1
