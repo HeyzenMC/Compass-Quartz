@@ -33,7 +33,6 @@
 // --- Smartphone (< 768 px) -------------------------------------------
 @media (max-width: 768px) {
   // Beide Sidebars komplett ausblenden
-  #quartz-body > .sidebar.left,
   #quartz-body > .sidebar.right {
     display: none !important;
   }
@@ -760,4 +759,35 @@ a.internal.internal-link.bases-card {
 .leaflet-map {
   max-width: 40%;
   /* Optional: margin: 0 auto; für zentriert */
+}
+
+
+// TEST
+
+// =====================================================================
+// EXAKTE BEGRENZUNG DES MITTLEREN CONTENT-BEREICHS
+// =====================================================================
+
+#quartz-body > .center {
+  // Verhindert, dass der Inhalt auf riesigen Bildschirmen zu breit läuft
+  max-width: 1300px !important; 
+
+  // Verhindert, dass der Bereich auf Laptops zu stark gequetscht wird
+  min-width: 500px !important; 
+
+  // Sorgt dafür, dass die Mitte zentriert bleibt, wenn das Grid breiter ist
+  margin: 0 auto !important;   
+  
+  // Breite auf 100% setzen, damit die Limits greifen können
+  width: 100% !important;      
+}
+
+// --- Sonderregelung für kleine Bildschirme (Smartphone) ---
+// Da Smartphones schmaler als das obige min-width (500px) sind,
+// müssen wir den Minimalwert dort wieder aufheben.
+@media (max-width: 768px) {
+  #quartz-body > .center {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
 }
