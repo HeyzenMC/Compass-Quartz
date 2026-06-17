@@ -33,8 +33,23 @@
 // --- Smartphone (< 768 px) -------------------------------------------
 @media (max-width: 768px) {
   // Beide Sidebars komplett ausblenden
+  #quartz-body > .sidebar.left:not(.open),
   #quartz-body > .sidebar.right {
     display: none !important;
+  }
+
+#quartz-body > .sidebar.left.open {
+    display: flex !important;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 85vw !important; // Nimmt 85% der Bildschirmbreite ein
+    height: 100vh !important;
+    z-index: 9999 !important;
+    background-color: var(--light) !important; // Nutzt dein helles Fantasy-Background
+    box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+    padding: 2rem 1rem !important;
+    overflow-y: auto !important; // Macht den Explorer scrollbar
   }
 
   // Content nutzt volle Breite
