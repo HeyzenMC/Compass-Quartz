@@ -33,7 +33,6 @@
 // --- Smartphone (< 768 px) -------------------------------------------
 @media (max-width: 768px) {
   // Beide Sidebars komplett ausblenden
-  #quartz-body > .sidebar.left:not(.open),
   #quartz-body > .sidebar.right {
     display: none !important;
   }
