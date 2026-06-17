@@ -89,7 +89,7 @@
   div#quartz-root.page:not([data-frame="canvas"]):not([data-frame="excalidraw"]) {
     & div#quartz-body {
       // Schmalere Sidebars → Center wächst automatisch
-      grid-template-columns: 250px 1fr 220px !important;
+      grid-template-columns: 220px 1fr 220px !important;
       // Kein max-width-Limit → nutzt die volle Fensterbreite
       max-width: 100% !important;
     }
@@ -758,6 +758,6 @@ a.internal.internal-link.bases-card {
 }
 
 .leaflet-map {
-  max-width: 50%;
+  max-width: 40%;
   /* Optional: margin: 0 auto; für zentriert */
 }
