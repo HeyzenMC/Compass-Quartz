@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: en-US
-  baseUrl: heyzenmc.github.io/Compass-Quartz/
+  baseUrl: heyzenmc.github.io/Compass-Quartz
   ignorePatterns:
     - private
     - templates
@@ -22,14 +22,14 @@ configuration:
       code: JetBrains Mono
     colors:
       lightMode:
-        light: "#faf8f8"
-        lightgray: "#e5e5e5"
-        gray: "#b8b8b8"
-        darkgray: "#4e4e4e"
-        dark: "#2b2b2b"
-        secondary: "#284b63"
-        tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
+        light: "#fdf6e3"
+        lightgray: "#eaddc5"
+        gray: "#b8a898"
+        darkgray: "#3a2e26"
+        dark: "#2b1d14"
+        secondary: "#9e2a2b"
+        tertiary: "#d16d6e"
+        highlight: rgba(158, 42, 43, 0.1)
         textHighlight: "#fff23688"
       darkMode:
         light: "#161618"
@@ -42,13 +42,14 @@ configuration:
         highlight: rgba(143, 159, 169, 0.15)
         textHighlight: "#b3aa0288"
 plugins:
-  - source: github:saberzero1/quartz-themes
-    name: quartz-themes
-    repo: https://github.com/saberzero1/quartz-themes.git
-    subdir: plugin
+  - source:
+      name: quartz-themes
+      repo: github:saberzero1/quartz-themes
+      subdir: plugin
     enabled: true
     options:
       theme: its-theme.ttrpg-wotc
+      mode: both
   - source: github:quartz-community/created-modified-date
     enabled: true
     options:
@@ -69,7 +70,17 @@ plugins:
   - source: github:quartz-community/obsidian-flavored-markdown
     enabled: true
     options:
+      comments: true
+      highlight: true
+      wikilinks: true
+      callouts: true
+      mermaid: true
+      parseTags: true
+      parseArrows: true
+      parseBlockReferences: true
       enableInHtmlEmbed: false
+      enableYouTubeEmbed: true
+      enableVideoEmbed: true
       enableCheckbox: true
     order: 30
   - source: github:quartz-community/github-flavored-markdown
@@ -98,7 +109,7 @@ plugins:
     enabled: false
     order: 85
   - source: github:quartz-community/hard-line-breaks
-    enabled: false
+    enabled: true
     order: 90
   - source: github:quartz-community/ox-hugo
     enabled: false
@@ -129,18 +140,25 @@ plugins:
     enabled: true
   - source: github:quartz-community/og-image
     enabled: true
+    options: {}
   - source: github:quartz-community/cname
     enabled: true
   - source: github:quartz-community/canvas-page
     enabled: true
+    options: {}
   - source: github:quartz-community/content-page
     enabled: true
+    options: {}
   - source: github:quartz-community/folder-page
     enabled: true
+    options: {}
   - source: github:quartz-community/tag-page
     enabled: true
+    options: {}
   - source: github:quartz-community/explorer
     enabled: true
+    options: {}
+    title: Navigation
     layout:
       position: left
       priority: 50
@@ -163,7 +181,7 @@ plugins:
       position: right
       priority: 50
   - source: github:quartz-community/article-title
-    enabled: true
+    enabled: false
     layout:
       position: beforeBody
       priority: 10
@@ -209,7 +227,7 @@ plugins:
       position: afterBody
       priority: 10
   - source: github:quartz-community/footer
-    enabled: false
+    enabled: true
     options:
       links: null
   - source: github:quartz-community/recent-notes
@@ -254,11 +272,6 @@ plugins:
       passwordField: password
       unlistWhenEncrypted: false
       outputPath: static/encryptedContentIndex.json
-    order: 900
-    layout:
-      position: body
-      priority: 100
-      display: all
   - source: github:quartz-community/stacked-pages
     enabled: false
     layout:
@@ -271,17 +284,18 @@ plugins:
       folders:
         - Sonstige
     order: 5
+  - source: github:Requiae/quartz-leaflet-bases-plugin
+    enabled: true
+    options:
+      enableCopyTool: true
   - source: github:quartz-community/obsidian-plugin-leaflet
     enabled: true
     options: {}
     order: 50
-    layout:
-      position: right
-      priority: 50
   - source: github:quartz-community/external-quartz-leaflet-map-plugin
     enabled: true
     options:
-      enableCopyTool: false
+      enableCopyTool: true
     order: 50
   - source: github:quartz-community/obsidian-plugin-excalidraw
     enabled: true
@@ -290,6 +304,18 @@ plugins:
       darkMode: auto
       exportPadding: 20
     order: 50
+  - source: github:quartz-community/tui
+    enabled: true
+    options: {}
+    order: 50
+  - source: github:quartz-community/obsidian-plugin-ttrpg-tools-maps
+    enabled: true
+    order: 50
+    options:
+      blockLanguage: zoommap
+      inlineBlockHeaderId: ZOOMMAP-DATA
+      maxInlineDataBytes: 0
+      defaultIconKey: pin-red
 layout:
   groups:
     toolbar:
