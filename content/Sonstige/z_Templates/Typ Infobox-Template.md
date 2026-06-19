@@ -1,13 +1,10 @@
 <%*
 const presets = [
-  { name: "🟣 Lila     #9B59B6", color: "#9B59B6" },
-  { name: "🔴 Rot      #C0392B", color: "#C0392B" },
-  { name: "🟢 Grün     #27AE60", color: "#27AE60" },
-  { name: "🔵 Blau     #2980B9", color: "#2980B9" },
-  { name: "🟠 Orange   #E67E22", color: "#E67E22" },
-  { name: "🟡 Gold     #D4AC0D", color: "#D4AC0D" },
-  { name: "🩵 Petrol   #17A589", color: "#17A589" },
-  { name: "⚫ Grau     #7F8C8D", color: "#7F8C8D" },
+  { name: "🔵 NPC     #1c557a", color: "#1c557a" },
+  { name: "🟤🟠 Ort   #a85a22", color: "#a85a22" },
+  { name: "🟡 Organisation    #898c2b", color: "#898c2b" },
+  { name: "🩵 Magisches Item   #1a8787", color: "#1a8787" },
+  { name: "⚫ Gott     #464a4a", color: "#464a4a" },
   { name: "✏️  Eigene Farbe...", color: "custom" },
 ];
 
@@ -15,7 +12,7 @@ const choice = await tp.system.suggester(
   presets.map(p => p.name),
   presets,
   false,
-  "Infobox-Farbe wählen"
+  "Für was ist die Infobox?"
 );
 
 if (!choice) return;
@@ -31,7 +28,7 @@ if (choice.color === "custom") {
 const title = await tp.system.prompt("Infobox-Titel", "Charaktername");
 if (!title) return;
 
-tR += `> [!infobox|wikipedia]
+tR += `> [!infobox|wikipedia sw-med]
 > <div class="infobox-color" style="--infobox-accent: ${color};">
 >
 > # **${title}**
@@ -39,6 +36,11 @@ tR += `> [!infobox|wikipedia]
 > ###### –
 > | Eigenschaft | Wert |
 > | --- | --- |
+> | **Name** | - |
+> | **Name** | - |
+> | **Name** | - |
+> | **Name** | - |
+> | **Name** | - |
 > | **Name** | - |
 >
 > </div>`;

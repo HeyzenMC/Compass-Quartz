@@ -2,30 +2,39 @@
 dg-publish: true
 publish: true
 ---
-> [!infobox|wikipedia right|relative ws-med]
+> [!infobox|wikipedia relative wsmall]
+> <div class="infobox-color" style="--infobox-accent: #8730ab80; --infobox-accent-end: #289b8433; --infobox-border-color: #000000; --table-text-color: #000000; --infobox-header-color: #000000;">
+>
 > # **Pixel Token**
-> ![[Pixel Token.png|300]]
-> ###### Heading 6
-> | Name | [[Pixel]] |
-> | --------- | --------- |
-> | **Rolle** | Player Character |
-> | **Ort** | [[Orte/Kirl/index\|Kirl]] |
+> ![[Pixel Token.png]]
+> ###### -
+>| Name | Pixel |
+> | ----- | ---- |
+> | **Spieler:In** | <kbd>Yvonne<kbd>|
+> | **Titel** | - |
+> | **Ort** | [[Kontinente/Orte/Kirl/index\|Kirl]] |
 > | **Status** | 🟢 Lebendig |
-> | **Gesinnung** |  |
-> | **Rasse** | [[Lizardfolk]] (Krokodil) |
+> | **Rasse** | [[Lizardfolk]] |
 > | **Geschlecht** | Weiblich |
 > | **Alter** | 18 |
-> | **Klasse & Stufe** | Sorcerer - 1 |
-> | **Beziehung zu ?** |  |
-> | **Kurzbeschreibung** |  |
-> | **Alignment** | Neutral Good |
+> | **Klasse/n** | Sorcerer - <kbd>LVL 1<kbd> |
+> | **Persönlichkeit** |  |
+>
+> # Verbindungen
+> - #### Organisationen
+> 	- 
+> 	- 
 > 
-> # Heading 1
-> - Bullet list
-> 	- Testing
-> 	- Testing
-> - Testing
-
+> - #### Personen
+> 	- [[Tea]]
+> 	- [[Reeee]]
+> 	- [[Klaus]] 
+> 
+> # Andere Beschäftigungen
+> - Autorin
+> - 
+>
+> </div>
 
 
 ## 🧭 Übersicht

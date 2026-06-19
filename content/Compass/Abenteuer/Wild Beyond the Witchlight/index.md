@@ -1,10 +1,15 @@
 ---
 folderNote: false
 dg-publish: true
-icon: RaFairyWand
 publish: true
 tags:
   - icon-🎇
+banner: Sonstige/z_Attachments/015-map-1.1.webp
+icon-x: 78
+banner-height: 380
+content-start: 371
+banner-fade: -45
+icon-size: 10
 ---
 # Wild Beyond the Witchlight
 

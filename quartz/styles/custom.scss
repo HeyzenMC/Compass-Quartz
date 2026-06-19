@@ -33,10 +33,13 @@
 // --- Smartphone (< 768 px) -------------------------------------------
 @media (max-width: 768px) {
   // Beide Sidebars komplett ausblenden
+  #quartz-body > .sidebar.left:not(.open),
   #quartz-body > .sidebar.right {
     display: none !important;
   }
 
+
+// NOCHMAL NACHPRÜFEN DER TEIL KOMMT VON GEMINI
 #quartz-body > .sidebar.left.open {
     display: flex !important;
     position: fixed !important;
@@ -616,9 +619,27 @@ a.internal.internal-link.bases-card {
 
 .callout.callout[data-callout~=infobox] > .callout-content > .infobox-color {
   display: block;
-  background-color: color-mix(in srgb, var(--infobox-accent) 10%, transparent);
-  border: 1px solid #000000;
-  --outer-bar: color-mix(in srgb, var(--infobox-accent, var(--background-secondary)) 30%, var(--background-primary) 70%);
+  background: linear-gradient(
+    to bottom,
+    var(--infobox-accent, var(--note, var(--background-primary))),
+    var(--infobox-accent-end, var(--infobox-accent, var(--background-primary)))
+  ) !important;
+  border: 2px solid #000000;
+  border-radius: var(--radius-s);
+  --outer-bar: color-mix(in srgb, var(--infobox-accent) 65%, var(--background-primary) 35%);
+}
+
+.callout.callout[data-callout~=infobox] > .callout-content > .infobox-color {
+  border-color: var(--infobox-border-color, var(--table, var(--background-modifier-border))) !important;
+}
+
+.callout.callout[data-callout~=infobox] > .callout-content > .infobox-color table td,
+.callout.callout[data-callout~=infobox] > .callout-content > .infobox-color table th {
+  color: var(--table-text-color, var(--text-normal));
+}
+
+.callout.callout[data-callout~=infobox] > .callout-content > .infobox-color :is(h1,h2,h3,h4,h5,h6) {
+  color: var(--infobox-header-color, var(--text-normal));
 }
 
 .callout.callout[data-callout~=infobox] > .callout-content > .infobox-color > :is(h1, h2, h3, h4, h5, h6) {
@@ -771,7 +792,7 @@ a.internal.internal-link.bases-card {
 }
 
 .leaflet-map {
-  max-width: 40%;
+  max-width: 50%;
   /* Optional: margin: 0 auto; für zentriert */
 }
 

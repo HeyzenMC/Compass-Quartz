@@ -18,10 +18,8 @@ const openColorPicker = (initial='#9B59B6') => new Promise((resolve,reject) => {
 
   const overlay = document.createElement('div');
   overlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.55);z-index:9999;display:flex;align-items:center;justify-content:center;';
-
   const box = document.createElement('div');
   box.style.cssText = 'background:var(--background-primary);border-radius:12px;padding:16px;width:300px;';
-
   const sty = document.createElement('style');
   sty.textContent = `.cp-hue{-webkit-appearance:none;width:100%;height:14px;border-radius:7px;outline:none;border:none;cursor:pointer;background:linear-gradient(to right,#f00,#ff0,#0f0,#0ff,#00f,#f0f,#f00);display:block;margin:0 0 10px;}.cp-hue::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:white;border:2px solid rgba(0,0,0,0.25);cursor:pointer;}`;
   box.appendChild(sty);
@@ -115,21 +113,57 @@ const openColorPicker = (initial='#9B59B6') => new Promise((resolve,reject) => {
   drawCanvas();
 });
 
+// ── Ab hier: Hauptlogik ──────────────────────────────────────
+
 let pickedColor;
 try { pickedColor = await openColorPicker(); } catch(e) { return; }
+
+const useGradient = await tp.system.suggester(
+  ["🎨 Ja, zweite Farbe wählen", "⬜ Nein, einfarbig bleiben"],
+  [true, false], false, "Farbverlauf?"
+);
+
+let gradientStyle = `--infobox-accent: ${pickedColor};`;
+if (useGradient) {
+  let pickedColor2;
+  try { pickedColor2 = await openColorPicker(pickedColor); } catch(e) { return; }
+  gradientStyle += ` --infobox-accent-end: ${pickedColor2};`;
+}
 
 const title = await tp.system.prompt("Infobox-Titel", "Charaktername");
 if (!title) return;
 
 tR += `> [!infobox|wikipedia]
-> <div class="infobox-color" style="--infobox-accent: ${pickedColor};">
+> <div class="infobox-color" style="${gradientStyle} --infobox-border-color: #000000; --table-text-color: #000000; --infobox-header-color: #000000;">
 >
 > # **${title}**
-> ![[Token.png]]
-> ###### –
-> | Eigenschaft | Wert |
-> | --- | --- |
-> | **Name** | - |
+> ![[.png]]
+> ###### -
+>| Name | ... |
+> | ----- | ---- |
+> | **Spieler:In** | <kbd></kbd> |
+> | **Titel** | - |
+> | **Ort** |  |
+> | **Status** | 🟢 Lebendig |
+> | **Rasse** | [[]] |
+> | **Geschlecht** |  |
+> | **Alter** |  |
+> | **Klasse/n** |  <kbd></kbd> |
+> | **Persönlichkeit** |  |
+>
+> # Verbindungen
+> - #### Organisationen
+> 	- 
+> 	- 
+> 
+> - #### Personen
+> 	- 
+> 	- 
+> 	- 
+> 
+> # Andere Beschäftigungen
+> - 
+> - 
 >
 > </div>`;
 -%>

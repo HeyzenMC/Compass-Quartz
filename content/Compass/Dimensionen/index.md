@@ -17,5 +17,3 @@ card_link: "[[Compass/Dimensionen/index|Dimensionen]]"
 >
 >%% End Waypoint %%
 
->[!infobox|s-t]- ahsdjkwasdw
->asbdhjkwjabsd

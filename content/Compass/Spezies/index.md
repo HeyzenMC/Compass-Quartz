@@ -15,9 +15,11 @@ card_link: "[[Compass/Spezies/index|Spezies]]"
 > [!infobox|wikipedia right|relative ws-med]
 > # Spezies Übersicht 
 >%% Begin Waypoint %%
->- **[[Compass/Spezies/index|Spezies]]**
+>- **[[Compass/Spezies/index.md|Spezies]]**
+>	- [[Aarakocra]]
 >	- [[Aasimar]]
 >	- [[Goblin]]
+>	- [[Kobold]]
 >	- [[Lizardfolk]]
 >	- [[Mensch]]
 >	- [[Ork]]

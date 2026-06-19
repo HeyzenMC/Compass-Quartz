@@ -1,6 +1,6 @@
 >[!cards|4]
 >**[[Island of Skulls]]**
-![[image.png]]
+> [![](image.png)](Island%20of%20Skulls)
 >
 >**[[Journey Board]]**
 >

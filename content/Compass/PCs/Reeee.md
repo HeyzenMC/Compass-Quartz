@@ -2,21 +2,24 @@
 dg-publish: true
 publish: true
 ---
-> [!infobox|wikipedia right|relative ws-med]
+> [!infobox|wikipedia relative wsmall]
+> <div class="infobox-color" style="--infobox-accent: #018338B3; --infobox-accent-end: #93760280; --infobox-border-color: #000000; --table-text-color: #000000; --infobox-header-color: #000000;">
+>
 > # **Reeee**
 > ![[Reeee Token.png]]
 > ###### -
-> | Name |  [[Reeee]] |
-> | ----- | ----- |
-> | **Spieler:In** | <kbd>LARS</kbd> |
+>| Name | Reeee |
+> | ----- | ---- |
+> | **Spieler:In** | <kbd>Lars</kbd> |
 > | **Titel** | - |
-> | **Ort** | [[Orte/Kirl/index\|Kirl]] |
+> | **Ort** | ?? |
 > | **Status** | 🟢 Lebendig |
 > | **Rasse** | [[Goblin]] |
 > | **Geschlecht** | Männlich |
-> | **Alter** | 17 |
-> | **Klasse/n** | Schurke <kbd>LVL 2</kbd> |
+> | **Alter** | ?? |
+> | **Klasse/n** |  Schurke - <kbd>LVL 1</kbd> |
 > | **Persönlichkeit** |  |
+>
 > # Verbindungen
 > - #### Organisationen
 > 	- [[Luxmaxxer]]
@@ -30,6 +33,10 @@ publish: true
 > # Andere Beschäftigungen
 > - [[Luxmaxxer|Luxmaxxing]]
 > - Gemischtwarenhändler
+>
+> </div>
+
+
 
 
 ## 🧭 Übersicht
