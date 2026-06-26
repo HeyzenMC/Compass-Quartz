@@ -14,14 +14,27 @@ card_link: "[[Compass/NPCS/index|NPCS]]"
 > # NPCS Übersicht 
 >%% Begin Waypoint %%
 >- **[[Compass/NPCS/index.md|NPCS]]**
->	- **[[Compass/NPCS/NPCs in Kirl/index.md|NPCs in Kirl]]**
+>	- **[[Compass/NPCS/NPCs in WBtW/index.md|NPCs in WBtW]]**
+>		- [[Die Unbekannte]]
+>		- [[Elfward Cullensen]]
+>		- [[Gorgle 1]]
+>		- [[Gorgle]]
+>		- [[Klaus 1]]
 >		- [[Klaus]]
+>		- [[Lory]]
+>		- [[Memmet Cullensen]]
+>		- [[Mephe Stey 1]]
+>		- [[Mephe Stey]]
+>		- [[Mister Light 1]]
 >		- [[Mister Light]]
+>		- [[Mister Witch 1]]
 >		- [[Mister Witch]]
+>		- [[Puck]]
+>		- [[Shelldon 1]]
 >		- [[Shelldon]]
+>		- [[Tay-La Lordner]]
+>		- [[Tea 1]]
 >		- [[Tea]]
->	- [[Gorgle]]
->	- [[Mephe Stey]]
 >
 >%% End Waypoint %%
 

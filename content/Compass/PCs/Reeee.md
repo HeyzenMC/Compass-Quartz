@@ -2,7 +2,7 @@
 dg-publish: true
 publish: true
 ---
-> [!infobox|wikipedia relative wsmall]
+> [!infobox|wikipedia relative ws-med]
 > <div class="infobox-color" style="--infobox-accent: #018338B3; --infobox-accent-end: #93760280; --infobox-border-color: #000000; --table-text-color: #000000; --infobox-header-color: #000000;">
 >
 > # **Reeee**
@@ -26,8 +26,8 @@ publish: true
 > 	- Händlergilde
 > 
 > - #### Personen
-> 	- [[Shelldon]]
-> 	- [[Gorgle]]
+> 	- [[Shelldon 1]]
+> 	- [[Gorgle 1]]
 > 	- [[Pixel]]
 > 
 > # Andere Beschäftigungen

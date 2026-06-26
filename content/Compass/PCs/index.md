@@ -14,9 +14,11 @@ card_link: "[[Compass/PCs/index|PCs]]"
 > # PCs Übersicht 
 >%% Begin Waypoint %%
 >- **[[Compass/PCs/index.md|PCs]]**
->	- [[Jammy]]
 >	- [[Pixel]]
->	- [[Jammy]]
+>	- [[Reeee]]
+>	- [[Rosi]]
+>	- [[Tott]]
+>
 >%% End Waypoint %%
 
 

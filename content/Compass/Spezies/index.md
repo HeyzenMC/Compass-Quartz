@@ -18,7 +18,12 @@ card_link: "[[Compass/Spezies/index|Spezies]]"
 >- **[[Compass/Spezies/index.md|Spezies]]**
 >	- [[Aarakocra]]
 >	- [[Aasimar]]
+>	- [[Changeling]]
+>	- [[Dragonborn]]
 >	- [[Goblin]]
+>	- [[Halbling]]
+>	- [[Harengon]]
+>	- [[Hoch-Elf]]
 >	- [[Kobold]]
 >	- [[Lizardfolk]]
 >	- [[Mensch]]

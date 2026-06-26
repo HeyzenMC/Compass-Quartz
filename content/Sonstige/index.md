@@ -2,6 +2,7 @@
 > # Sonstige Übersicht 
 >%% Begin Waypoint %%
 >- **[[Sonstige/index.md|Sonstige]]**
+>	- **[[Sonstige/Dokumente/index.md|Dokumente]]**
 >	- **[[Sonstige/Excalidraw/index.md|Excalidraw]]**
 >		- [[Drawing 2025-10-11 22.14.54.excalidraw]]
 >		- [[Drawing 2026-06-08 00.40.35.excalidraw]]
@@ -24,6 +25,10 @@
 >		- [[Human.webp]]
 >		- [[image-1.png]]
 >		- [[image-2.png]]
+>		- [[image-3.png]]
+>		- [[image-4.png]]
+>		- [[image-5.png]]
+>		- [[image-6.png]]
 >		- [[image.png]]
 >		- [[Jammy.png]]
 >		- [[kirl.png]]
@@ -32,22 +37,36 @@
 >		- [[Luxmaxxer.jpg]]
 >		- [[Magic Staff.png]]
 >		- [[Meph Stey.png]]
+>		- [[Night Hag Stats-1.png]]
+>		- [[Night Hag Stats.png]]
+>		- [[Night-Hag Statblock.png]]
+>		- [[night-hag.jpg]]
 >		- [[olymp.png]]
+>		- [[Orangene Glas-Murmel.png]]
 >		- [[Orc.webp]]
 >		- [[Pasted image 20260608125131.png]]
 >		- [[Pasted image 20260608125432.png]]
 >		- [[Pasted image 20260608143245.png]]
 >		- [[Pasted image 20260608172708.png]]
+>		- [[Pasted image 20260623172710.png]]
+>		- [[Pasted image 20260623182233.png]]
 >		- [[Pentagram.png]]
 >		- [[Pixel Token.png]]
 >		- [[Races Compass.png]]
 >		- [[Reeee Token.png]]
+>		- [[Rosi-Token.png]]
 >		- [[Session 1 - Planung 1.canvas]]
 >		- [[Token für Ramy.png]]
 >		- [[Tortle.webp]]
+>		- [[Tott.png]]
 >		- [[Witchlight Carnival Battle.jpg]]
 >	- **[[Sonstige/z_Bases/index.md|z_Bases]]**
 >		- [[Main-Page Maybe.base|Main-Page Maybe]]
+>	- **[[Sonstige/z_Content & Rules/index.md|z_Content & Rules]]**
+>	- **[[Sonstige/z_Planungs-Dateien/index.md|z_Planungs-Dateien]]**
+>		- [[🐉 Drag-Queens - Session 1 -  An Apple a Day - Drawings & Präsentation]]
+>		- [[🐉 Drag-Queens - Session 1 - An Apple a Day - Planung.canvas]]
+>		- [[Session 1 - Planung.canvas]]
 >	- **z_Templates**
 >		- [[Card-Link Template]]
 >		- [[Cards-Vorlage]]
@@ -58,6 +77,7 @@
 >		- [[Leaflet-Map-Template]]
 >		- [[Location-Template]]
 >		- [[NPC Vorlage]]
+>		- [[Session-Journal-Preset]]
 >		- [[Tabs-Vorlage]]
 >		- [[Title-Template|<% tp.file.folder(true).split("/").pop() %>]]
 >		- [[Typ Infobox-Template]]

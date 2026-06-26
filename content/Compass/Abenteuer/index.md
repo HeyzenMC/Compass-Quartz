@@ -14,12 +14,11 @@ card_link: "[[Compass/Abenteuer/index|Abenteuer]]"
 >%% Begin Waypoint %%
 >- **[[Compass/Abenteuer/index.md|Abenteuer]]**
 >	- **[[Compass/Abenteuer/Wild Beyond the Witchlight/index.md|Wild Beyond the Witchlight]]**
->		- **[[Compass/Abenteuer/Wild Beyond the Witchlight/Sessions/index.md|Sessions]]**
->			- **[[Compass/Abenteuer/Wild Beyond the Witchlight/Sessions/Encounter/index.md|Encounter]]**
->			- [[Session 1 - Lars und Yvonne]]
->			- [[Session 1 - Planung.canvas]]
+>		- **[[Compass/Abenteuer/Wild Beyond the Witchlight/Encounter/index.md|Encounter]]**
+>		- **[[Compass/Abenteuer/Wild Beyond the Witchlight/Sessions WBtW/index.md|Sessions WBtW]]**
+>			- [[🐉 Drag-Queens Session 1 - An Apple A Day - Journal]]
+>			- [[🐢 Reeee und Pixel - Session 1 - Biss zum Gefängnisausbruch - Journal]]
 >
 >%% End Waypoint %%
-
 
 

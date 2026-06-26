@@ -14,6 +14,7 @@ card_link: "[[Compass/Tiere & Monster/index|Tiere & Monster]]"
 > # Tiere & Monster Übersicht 
 >%% Begin Waypoint %%
 >- **[[Compass/Tiere & Monster/index.md|Tiere & Monster]]**
+>	- [[Night-Hag]]
 >
 >%% End Waypoint %%
 

@@ -1,0 +1,2 @@
+Lory ist eine weibliche [[Harengon]] und eine sehr enge Freundin und Arbeitskollegin von [[Rosi]].
+Lory ist - entgegen ihrem äußerlichen Erscheinungsbild - extrem stark und drückt zum aktuellen Zeitpunkt 340kg auf Reps.

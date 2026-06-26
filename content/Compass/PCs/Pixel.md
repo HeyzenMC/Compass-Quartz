@@ -1,17 +1,19 @@
 ---
 dg-publish: true
 publish: true
+aliases:
+  - Lexi P
 ---
-> [!infobox|wikipedia relative wsmall]
+> [!infobox|wikipedia relative ws-med]
 > <div class="infobox-color" style="--infobox-accent: #8730ab80; --infobox-accent-end: #289b8433; --infobox-border-color: #000000; --table-text-color: #000000; --infobox-header-color: #000000;">
 >
-> # **Pixel Token**
+> # **Pixel**
 > ![[Pixel Token.png]]
 > ###### -
->| Name | Pixel |
+>| Name | Pixel Gatôr |
 > | ----- | ---- |
 > | **Spieler:In** | <kbd>Yvonne<kbd>|
-> | **Titel** | - |
+> | **Titel / AKA** | Lexi P |
 > | **Ort** | [[Kontinente/Orte/Kirl/index\|Kirl]] |
 > | **Status** | 🟢 Lebendig |
 > | **Rasse** | [[Lizardfolk]] |
@@ -26,9 +28,9 @@ publish: true
 > 	- 
 > 
 > - #### Personen
-> 	- [[Tea]]
+> 	- [[Tea 1]]
 > 	- [[Reeee]]
-> 	- [[Klaus]] 
+> 	- [[Klaus 1]] 
 > 
 > # Andere Beschäftigungen
 > - Autorin
@@ -36,6 +38,12 @@ publish: true
 >
 > </div>
 
+
+#### Notizen
+
+>> - Anfällig für Glücksspiele
+>> - Feige, aber möchte Abenteuer erleben
+>> - 
 
 ## 🧭 Übersicht
 **Name:** {{title}}  

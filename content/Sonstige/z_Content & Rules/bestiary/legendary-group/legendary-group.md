@@ -1,0 +1,41 @@
+---
+obsidianUIMode: preview
+cssclasses:
+- json5e-note
+- json5e-index
+---
+# Index of Legendary Group
+
+- [Aboleth](./aboleth-xmm.md)
+- [Amethyst Dragon](./amethyst-dragon-ftd.md)
+- [Ancient Deep Crow](./ancient-deep-crow-ai.md)
+- [Ancient Dragon Turtle](./ancient-dragon-turtle-ftd.md)
+- [Arch-hag](./arch-hag-xmm.md)
+- [Beholder](./beholder-xmm.md)
+- [Black Dragon](./black-dragon-xmm.md)
+- [Blue Dragon](./blue-dragon-xmm.md)
+- [Brass Dragon](./brass-dragon-xmm.md)
+- [Bronze Dragon](./bronze-dragon-xmm.md)
+- [Copper Dragon](./copper-dragon-xmm.md)
+- [Crystal Dragon](./crystal-dragon-ftd.md)
+- [Death Tyrant](./death-tyrant-xmm.md)
+- [Deep Dragon](./deep-dragon-ftd.md)
+- [Demilich](./demilich-xmm.md)
+- [Dracolich](./dracolich-xmm.md)
+- [Emerald Dragon](./emerald-dragon-ftd.md)
+- [Gold Dragon](./gold-dragon-xmm.md)
+- [Green Dragon](./green-dragon-xmm.md)
+- [Illithilich](./illithilich-vgm.md)
+- [Kraken](./kraken-xmm.md)
+- [Lich](./lich-xmm.md)
+- [Moonstone Dragon](./moonstone-dragon-ftd.md)
+- [Mummy Lord](./mummy-lord-xmm.md)
+- [Red Dragon](./red-dragon-xmm.md)
+- [Sapphire Dragon](./sapphire-dragon-ftd.md)
+- [Shadow Dragon](./shadow-dragon-xmm.md)
+- [Silver Dragon](./silver-dragon-xmm.md)
+- [Sphinx](./sphinx-xmm.md)
+- [Topaz Dragon](./topaz-dragon-ftd.md)
+- [Unicorn](./unicorn-xmm.md)
+- [Vampire](./vampire-xmm.md)
+- [White Dragon](./white-dragon-xmm.md)

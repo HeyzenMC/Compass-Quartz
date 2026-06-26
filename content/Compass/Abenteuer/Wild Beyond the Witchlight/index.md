@@ -4,7 +4,7 @@ dg-publish: true
 publish: true
 tags:
   - icon-🎇
-banner: Sonstige/z_Attachments/015-map-1.1.webp
+banner: [[015-map-1.1.webp]]
 icon-x: 78
 banner-height: 380
 content-start: 371
@@ -15,6 +15,6 @@ icon-size: 10
 
 
 
-[[Session 1 - Lars und Yvonne]]
+[[🐢 Reeee und Pixel - Session 1 - Biss zum Gefängnisausbruch - Journal]]
 
 [[Compass/Abenteuer/Wild Beyond the Witchlight/index|Wild Beyond the Witchlight]]

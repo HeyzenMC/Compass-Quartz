@@ -9,7 +9,7 @@ marker:
 
 ### Beschreibung
 
-**Was macht jemand wie [[Klaus]] an so einem Ort?** 
+**Was macht jemand wie [[Klaus 1]] an so einem Ort?** 
 
 asudgbwakbdsjwaksjbdwvbaks
 
