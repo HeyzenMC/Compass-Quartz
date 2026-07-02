@@ -1,4 +1,5 @@
----
+﻿---
+unlisted: true
 obsidianUIMode: preview
 cssclasses:
 - json5e-class

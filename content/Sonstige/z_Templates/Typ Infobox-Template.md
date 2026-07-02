@@ -1,3 +1,6 @@
+﻿---
+unlisted: true
+---
 <%*
 const presets = [
   { name: "🔵 NPC     #1c557a", color: "#1c557a" },

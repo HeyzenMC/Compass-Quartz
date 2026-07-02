@@ -1,3 +1,6 @@
+﻿---
+unlisted: true
+---
 ```base
 views:
   - type: leaflet-map

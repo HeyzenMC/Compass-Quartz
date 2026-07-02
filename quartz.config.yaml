@@ -279,7 +279,7 @@ plugins:
       priority: 50
       display: all
   - source: github:HeyzenMC/quartz-exclude-folders
-    enabled: true
+    enabled: false
     options:
       folders:
         - Sonstige

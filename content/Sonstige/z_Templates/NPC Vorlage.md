@@ -1,3 +1,6 @@
+﻿---
+unlisted: true
+---
 > [!infobox|wikipedia right|relative ws-med]
 > # Heading
 > ![[Bild.png]]

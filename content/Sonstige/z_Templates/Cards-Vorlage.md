@@ -1,3 +1,6 @@
+﻿---
+unlisted: true
+---
 >[!cards|4]
 >**[[Island of Skulls]]**
 > [![](image.png)](Island%20of%20Skulls)

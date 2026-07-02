@@ -1,3 +1,6 @@
+﻿---
+unlisted: true
+---
 > [!infobox|right wikipedia]+
 > # Heading
 > ![[image.png]]

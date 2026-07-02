@@ -1,3 +1,6 @@
+﻿---
+unlisted: true
+---
 
 Das ist dein neuer *Vault*.
 

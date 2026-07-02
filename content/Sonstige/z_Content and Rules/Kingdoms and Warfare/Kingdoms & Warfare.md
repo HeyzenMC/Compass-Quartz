@@ -1,3 +1,6 @@
+﻿---
+unlisted: true
+---
 - [[#How to Use This Book|How to Use This Book]]
 - [[#Scale|Scale]]
 - [[#The Operation|The Operation]]
