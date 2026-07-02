@@ -26,8 +26,8 @@ publish: true
 > 	- Händlergilde
 > 
 > - #### Personen
-> 	- [[Shelldon 1]]
-> 	- [[Gorgle 1]]
+> 	- [[Shelldon]]
+> 	- [[Gorgle]]
 > 	- [[Pixel]]
 > 
 > # Andere Beschäftigungen

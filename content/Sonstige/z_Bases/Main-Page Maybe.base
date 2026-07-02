@@ -28,7 +28,7 @@ views:
       - property: file.folder
         direction: ASC
     imageAspectRatio: 1
-    cardSize: 190
+    cardSize: 210
     rowHeight: medium
     image: note.Cover
   - type: table

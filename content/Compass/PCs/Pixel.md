@@ -28,9 +28,9 @@ aliases:
 > 	- 
 > 
 > - #### Personen
-> 	- [[Tea 1]]
+> 	- [[Tea]]
 > 	- [[Reeee]]
-> 	- [[Klaus 1]] 
+> 	- [[Klaus]] 
 > 
 > # Andere Beschäftigungen
 > - Autorin

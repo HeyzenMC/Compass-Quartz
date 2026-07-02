@@ -16,6 +16,11 @@ card_link: "[[Compass/Kontinente/index|Kontinente]]"
 >- **[[Compass/Kontinente/index.md|Kontinente]]**
 >	- **[[Compass/Kontinente/Orte/index.md|Orte]]**
 >		- **[[Compass/Kontinente/Orte/Kirl/index.md|Kirl]]**
+>		- **[[Compass/Kontinente/Orte/Witchlight Karneval/index.md|Witchlight Karneval]]**
+>			- [[Big-Top Zelt]]
+>			- [[Festlicher Obstgarten]]
+>			- [[Karussel]]
+>			- [[Schwanengondola]]
 >
 >%% End Waypoint %%
 

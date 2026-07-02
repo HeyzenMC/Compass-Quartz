@@ -22,7 +22,3 @@ card_link: "[[Compass/PCs/index|PCs]]"
 >%% End Waypoint %%
 
 
-
-[[Reeee]]
-
-[[Pixel]]

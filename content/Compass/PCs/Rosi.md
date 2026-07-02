@@ -1,4 +1,4 @@
-> [!infobox|wikipedia relative sw-med]
+> [!infobox|wikipedia relative ws-med]
 > <div class="infobox-color" style="--infobox-accent: #d73204; --infobox-accent-end: #a46624; --infobox-border-color: #000000; --table-text-color: #000000; --infobox-header-color: #000000;">
 >
 > # **Rosi Teeblatt**
@@ -23,8 +23,8 @@
 > 
 > - #### Personen
 > 	- [[Lory]]
-> 	- [[Hilde die Pfanne]]
-> 	- 
+> 	- [[Tott]]
+> 	- [[Pixel]]
 > 
 > # Andere Beschäftigungen
 > - Bäckerin

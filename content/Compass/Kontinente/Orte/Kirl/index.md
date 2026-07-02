@@ -10,6 +10,7 @@ aliases:
 >%% Begin Waypoint %%
 >- **[[Compass/Kontinente/Orte/Kirl/index.md|Kirl]]**
 >	- [[Bibliothek von Kirl]]
+>	- [[Geheimversteck von ---]]
 >	- [[Marktplatz von Kirl]]
 >	- [[Stadtwache von Kirl]]
 >

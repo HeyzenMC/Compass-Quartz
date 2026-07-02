@@ -1,17 +1,20 @@
-## Kurze Zusammenfassung
+## Zusammenfassung
 
 
 ## Bedeutende Charaktere
 
 **Player Character**:
 
-## Besuchte Orte
+## (Besuchte) Orte
 
 
-## Plot-Hooks
+## Wichtige Ereignisse
 
 
 ## Entdeckte Gegenstände
+
+
+## Handlungsstränge und Mysterien
 
 
 ## Highlights

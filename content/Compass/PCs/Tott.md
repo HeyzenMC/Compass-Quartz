@@ -23,7 +23,7 @@
 > 
 > - #### Personen
 > 	-  [[Puck]]
-> 	-  [[Mephe Stey 1|Anier]]
+> 	-  [[Mephe Stey|Anier]]
 > 	-  
 > 
 > # Andere Beschäftigungen

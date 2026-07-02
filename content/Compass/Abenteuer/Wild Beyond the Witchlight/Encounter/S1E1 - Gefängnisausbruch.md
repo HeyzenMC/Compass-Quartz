@@ -1,1 +1,1 @@
-[[Reeee]] und [[Pixel]] entkommen mit Hilfe von [[Tay-La Lordner]] noch knapp [[Klaus 1]] und den anderen Stadtwachen. Sie landen in einem Geheimversteck von ??? und finden dort eine Detect Magic Schriftrolle, einen [[Blauer Knopf|blauen Knopf]] und eine [[Silberne Fadenspule]]
+[[Reeee]] und [[Pixel]] entkommen mit Hilfe von [[Tay-La Lordner]] noch knapp [[Klaus]] und den anderen Stadtwachen. Sie landen in einem Geheimversteck von ??? und finden dort eine Detect Magic Schriftrolle, einen [[Blauer Knopf|blauen Knopf]] und eine [[Silberne Fadenspule]]
