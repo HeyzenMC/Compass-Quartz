@@ -1,0 +1,634 @@
+﻿FileId: 5
+```typescript .quartz\plugins\obsidian-flavored-markdown\src\transformer.ts
+1: import type {
+2:   Root,
+3:   Html,
+4:   BlockContent,
+5:   PhrasingContent,
+6:   DefinitionContent,
+7:   Paragraph,
+8:   Code,
+9:   Parent,
+10:   Literal,
+11:   Image,
+12:   Link,
+13: } from "mdast";
+14: import type { Node } from "unist";
+15: import type { PluggableList } from "unified";
+16: import type { QuartzTransformerPlugin, JSResource, CSSResource } from "@quartz-community/types";
+17: import path from "path";
+18: import remarkObsidian from "@quartz-community/remark-obsidian";
+19: import rehypeObsidian from "@quartz-community/rehype-obsidian";
+20: import rehypeRaw from "rehype-raw";
+21: import { SKIP, visit } from "unist-util-visit";
+22: import { pathToRoot, slugTag, slugifyFilePath, capitalize } from "@quartz-community/utils";
+23: import { slug as githubSlug } from "github-slugger";
+24: import type { FilePath, FullSlug } from "@quartz-community/utils";
+25: // @ts-expect-error -- inline script import
+26: import calloutScript from "./scripts/callout.inline";
+27: // @ts-expect-error -- inline script import
+28: import checkboxScript from "./scripts/checkbox.inline";
+29: // @ts-expect-error -- inline script import
+30: import mermaidScript from "./scripts/mermaid.inline";
+31: import mermaidStyle from "./styles/mermaid.inline.scss";
+32: import { toHast } from "mdast-util-to-hast";
+33: import { toHtml } from "hast-util-to-html";
+34: 
+35: export interface ObsidianFlavoredMarkdownOptions {
+36:   comments: boolean;
+37:   highlight: boolean;
+38:   wikilinks: boolean;
+39:   callouts: boolean;
+40:   mermaid: boolean;
+41:   parseTags: boolean;
+42:   parseBlockReferences: boolean;
+43:   enableInHtmlEmbed: boolean;
+44:   enableYouTubeEmbed: boolean;
+45:   enableTweetEmbed: boolean;
+46:   enableVideoEmbed: boolean;
+47:   enableCheckbox: boolean;
+48:   enableObsidianUri: boolean;
+49: }
+50: 
+51: const defaultOptions: ObsidianFlavoredMarkdownOptions = {
+52:   comments: true,
+53:   highlight: true,
+54:   wikilinks: true,
+55:   callouts: true,
+56:   mermaid: true,
+57:   parseTags: true,
+58:   parseBlockReferences: true,
+59:   enableInHtmlEmbed: false,
+60:   enableYouTubeEmbed: true,
+61:   enableTweetEmbed: true,
+62:   enableVideoEmbed: true,
+63:   enableCheckbox: false,
+64:   enableObsidianUri: true,
+65: };
+66: 
+67: const calloutMapping = {
+68:   note: "note",
+69:   abstract: "abstract",
+70:   summary: "abstract",
+71:   tldr: "abstract",
+72:   info: "info",
+73:   todo: "todo",
+74:   tip: "tip",
+75:   hint: "tip",
+76:   important: "tip",
+77:   success: "success",
+78:   check: "success",
+79:   done: "success",
+80:   question: "question",
+81:   help: "question",
+82:   faq: "question",
+83:   warning: "warning",
+84:   attention: "warning",
+85:   caution: "warning",
+86:   failure: "failure",
+87:   missing: "failure",
+88:   fail: "failure",
+89:   danger: "danger",
+90:   error: "danger",
+91:   bug: "bug",
+92:   example: "example",
+93:   quote: "quote",
+94:   cite: "quote",
+95: } as const;
+96: 
+97: function canonicalizeCallout(calloutName: string): keyof typeof calloutMapping {
+98:   const normalizedCallout = calloutName.toLowerCase() as keyof typeof calloutMapping;
+99:   // if callout is not recognized, make it a custom one
+100:   return calloutMapping[normalizedCallout] ?? calloutName;
+101: }
+102: 
+103: export const externalLinkRegex = /^https?:\/\//i;
+104: 
+105: // !?                 -> optional embedding
+106: // \[\[               -> open brace
+107: // ([^\[\]\|\#]+)     -> one or more non-special characters ([,],|, or #) (name)
+108: // (#[^\[\]\|\#]+)?   -> # then one or more non-special characters (heading link)
+109: // (\\?\|[^\[\]\#]+)? -> optional escape \ then | then zero or more non-special characters (alias)
+110: // Deprecated: retained for backwards compatibility only; parsing now uses remark-obsidian.
+111: export const wikilinkRegex = new RegExp(
+112:   /!?\[\[([^[]\]#|\\]+)?(#+[^[]\]#|\\]+)?(\\?\|[^[]\]#]*)?\]\]/g,
+113: );
+114: // from https://github.com/escwxyz/remark-obsidian-callout/blob/main/src/index.ts
+115: const calloutRegex = new RegExp(/^\[!([\w-]+)\|?(.+?)?\]([+-]?)/);
+116: const calloutLineRegex = new RegExp(/^> *\[!\w+\|?.*?\][+-]?.*$/gm);
+117: // (?<=^| )             -> a lookbehind assertion, tag should start be separated by a space or be the start of the line
+118: // #(...)               -> capturing group, tag itself must start with #
+119: // (?:[-_\p{L}\d\p{Z}])+       -> non-capturing group, non-empty string of (Unicode-aware) alpha-numeric characters and symbols, hyphens and/or underscores
+120: // (?:\/[-_\p{L}\d\p{Z}]+)*)   -> non-capturing group, matches an arbitrary number of tag strings separated by "/"
+121: const videoExtensionRegex = new RegExp(/\.(mp4|webm|ogv|avi|mov|flv|wmv|mkv|mpg|mpeg|3gp|m4v)$/);
+122: const wikilinkImageEmbedRegex = new RegExp(
+123:   /^(?<alt>(?!^\d*x?\d*$).*?)?(\|?\s*?(?<width>\d+)(x(?<height>\d+))?)?$/,
+124: );
+125: 
+126: type WikilinkNode = Node & {
+127:   type: "wikilink";
+128:   path?: string;
+129:   heading?: string;
+130:   alias?: string;
+131:   embedded?: boolean;
+132: };
+133: 
+134: type HighlightNode = Parent & {
+135:   type: "highlight";
+136: };
+137: 
+138: type TagNode = Literal & {
+139:   type: "tag";
+140:   value: string;
+141: };
+142: 
+143: const getLiteralValue = (child: Node): string => {
+144:   const literalChild = child as { value?: unknown };
+145:   if (typeof literalChild.value === "string") {
+146:     return literalChild.value;
+147:   }
+148:   return "";
+149: };
+150: 
+151: export const ObsidianFlavoredMarkdown: QuartzTransformerPlugin<
+152:   Partial<ObsidianFlavoredMarkdownOptions>
+153: > = (userOpts) => {
+154:   const opts = { ...defaultOptions, ...userOpts };
+155: 
+156:   const mdastToHtml = (ast: PhrasingContent | Paragraph) => {
+157:     const hast = toHast(ast, { allowDangerousHtml: true })!;
+158:     return toHtml(hast, { allowDangerousHtml: true });
+159:   };
+160: 
+161:   return {
+162:     name: "ObsidianFlavoredMarkdown",
+163:     textTransform(_ctx, src) {
+164:       // pre-transform blockquotes
+165:       if (opts.callouts) {
+166:         src = src.replace(calloutLineRegex, (value) => {
+167:           // force newline after title of callout
+168:           return value + "\n> ";
+169:         });
+170:       }
+171: 
+172:       return src;
+173:     },
+174:     markdownPlugins(_ctx) {
+175:       const plugins: PluggableList = [];
+176: 
+177:       plugins.push([
+178:         remarkObsidian,
+179:         {
+180:           wikilinks: opts.wikilinks,
+181:           highlights: opts.highlight,
+182:           comments: opts.comments,
+183:           tags: opts.parseTags,
+184:           customTaskChars: opts.enableCheckbox,
+185:         },
+186:       ]);
+187: 
+188:       plugins.push(() => {
+189:         return (tree: Root, file) => {
+190:           const base = pathToRoot(file.data.slug! as FullSlug);
+191: 
+192:           if (opts.wikilinks) {
+193:             visit(
+194:               tree,
+195:               (node) => node.type === "wikilink",
+196:               (node, index: number | undefined, parent: Parent | undefined) => {
+197:                 if (parent == null || index == null) return;
+198:                 const wikilinkNode = node as WikilinkNode;
+199: 
+200:                 const fp = wikilinkNode.path?.trim() ?? "";
+201:                 const anchor = wikilinkNode.heading?.trim() ?? "";
+202:                 const aliasRaw = wikilinkNode.alias?.trim() ?? "";
+203:                 const alias = aliasRaw.length > 0 ? aliasRaw : undefined;
+204: 
+205:                 let replacement: BlockContent | PhrasingContent | Html;
+206: 
+207:                 if (wikilinkNode.embedded) {
+208:                   const ext: string = path.extname(fp).toLowerCase();
+209:                   const url = slugifyFilePath(fp as FilePath);
+210:                   if ([".jxl", ".png", ".jpg", ".jpeg", ".gif", ".bmp", ".webp"].includes(ext)) {
+211:                     const match = wikilinkImageEmbedRegex.exec(alias ?? "");
+212:                     const alt = match?.groups?.alt ?? "";
+213:                     const width = match?.groups?.width ?? "auto";
+214:                     const height = match?.groups?.height ?? "auto";
+215:                     const imageNode: Image = {
+216:                       type: "image",
+217:                       url,
+218:                       alt: "",
+219:                       data: {
+220:                         hProperties: {
+221:                           width,
+222:                           height,
+223:                           alt,
+224:                         },
+225:                       },
+226:                     };
+227:                     replacement = imageNode;
+228:                   } else if (ext === ".svg") {
+229:                     const match = wikilinkImageEmbedRegex.exec(alias ?? "");
+230:                     const alt = match?.groups?.alt ?? "";
+231:                     const width = match?.groups?.width ?? "auto";
+232:                     const height = match?.groups?.height ?? "auto";
+233:                     replacement = {
+234:                       type: "html",
+235:                       value: `<object data="${url}" type="image/svg+xml" width="${width}" height="${height}" aria-label="${alt}"></object>`,
+236:                     };
+237:                   } else if (
+238:                     [
+239:                       ".mp4",
+240:                       ".webm",
+241:                       ".ogv",
+242:                       ".avi",
+243:                       ".mov",
+244:                       ".flv",
+245:                       ".wmv",
+246:                       ".mkv",
+247:                       ".mpg",
+248:                       ".mpeg",
+249:                       ".3gp",
+250:                       ".m4v",
+251:                     ].includes(ext)
+252:                   ) {
+253:                     replacement = {
+254:                       type: "html",
+255:                       value: `<video src="${url}" controls></video>`,
+256:                     };
+257:                   } else if (
+258:                     [".mp3", ".wav", ".m4a", ".ogg", ".oga", ".aac", ".flac"].includes(ext)
+259:                   ) {
+260:                     replacement = {
+261:                       type: "html",
+262:                       value: `<audio src="${url}" controls></audio>`,
+263:                     };
+264:                   } else if ([".pdf"].includes(ext)) {
+265:                     replacement = {
+266:                       type: "html",
+267:                       value: `<iframe src="${url}" class="pdf"></iframe>`,
+268:                     };
+269:                   } else {
+270:                     // Keep the file extension for virtual page transclusions (e.g.
+271:                     // ![[file.canvas]], ![[file.base]]) so CrawlLinks can resolve
+272:                     // the target unambiguously against allSlugs. Only strip .md
+273:                     // since Markdown files never have extensions in their slugs.
+274:                     const stripExt = ext === ".md";
+275:                     const transcludeUrl = slugifyFilePath(fp as FilePath, stripExt);
+276:                     // Block references (^id) use exact key lookup — keep as-is.
+277:                     // Heading anchors must be slugified to match the ids that
+278:                     // rehype-slug generates on heading elements.
+279:                     const isBlockRef = anchor.startsWith("^");
+280:                     const block = anchor ? `#${isBlockRef ? anchor : githubSlug(anchor)}` : "";
+281:                     replacement = {
+282:                       type: "html",
+283:                       data: { hProperties: { transclude: true } },
+284:                       value: `<blockquote class="transclude" data-url="${transcludeUrl}" data-block="${block}" data-embed-alias="${alias ?? ""}"><a href="${
+285:                         transcludeUrl + block
+286:                       }" class="transclude-inner">Transclude of ${transcludeUrl}${block}</a></blockquote>`,
+287:                     };
+288:                   }
+289:                 } else if (fp.match(externalLinkRegex)) {
+290:                   const linkNode: Link = {
+291:                     type: "link",
+292:                     url: fp,
+293:                     children: [{ type: "text", value: alias ?? fp }],
+294:                   };
+295:                   replacement = linkNode;
+296:                 } else {
+297:                   // Heading anchors must be slugified to match the ids that
+298:                   // rehype-slug generates on heading elements.
+299:                   // Block references (^id) use exact key lookup — keep as-is.
+300:                   const isBlockRef = anchor.startsWith("^");
+301:                   const anchorPart = anchor ? `#${isBlockRef ? anchor : githubSlug(anchor)}` : "";
+302:                   const linkNode: Link = {
+303:                     type: "link",
+304:                     url: fp + anchorPart,
+305:                     children: [
+306:                       {
+307:                         type: "text",
+308:                         value: alias ?? (fp && anchor ? `${fp} > ${anchor}` : fp || anchor),
+309:                       },
+310:                     ],
+311:                   };
+312:                   replacement = linkNode;
+313:                 }
+314: 
+315:                 parent.children[index] = replacement;
+316:                 return SKIP;
+317:               },
+318:             );
+319:           }
+320: 
+321:           if (opts.highlight) {
+322:             visit(
+323:               tree,
+324:               (node) => node.type === "highlight",
+325:               (node, index: number | undefined, parent: Parent | undefined) => {
+326:                 if (parent == null || index == null) return;
+327:                 const highlightNode = node as HighlightNode;
+328:                 const text = highlightNode.children?.map(getLiteralValue).join("") ?? "";
+329:                 parent.children[index] = {
+330:                   type: "html",
+331:                   value: `<span class="text-highlight">${text}</span>`,
+332:                 };
+333:                 return SKIP;
+334:               },
+335:             );
+336:           }
+337: 
+338:           if (opts.parseTags) {
+339:             visit(
+340:               tree,
+341:               (node) => node.type === "tag",
+342:               (node, index: number | undefined, parent: Parent | undefined) => {
+343:                 if (parent == null || index == null) return;
+344:                 const tagNode = node as TagNode;
+345:                 if (/^[/\d]+$/.test(tagNode.value ?? "")) {
+346:                   parent.children[index] = {
+347:                     type: "text",
+348:                     value: `#${tagNode.value ?? ""}`,
+349:                   };
+350:                   return SKIP;
+351:                 }
+352: 
+353:                 const tag = slugTag(tagNode.value);
+354:                 if (file.data.frontmatter) {
+355:                   const frontmatter = file.data.frontmatter as { tags?: string[] };
+356:                   const noteTags = frontmatter.tags ?? [];
+357:                   frontmatter.tags = [...new Set([...noteTags, tag])];
+358:                 }
+359: 
+360:                 const tagLink: Link = {
+361:                   type: "link",
+362:                   url: base + `/tags/${tag}`,
+363:                   data: {
+364:                     hProperties: {
+365:                       className: ["tag-link"],
+366:                     },
+367:                   },
+368:                   children: [{ type: "text", value: tag }],
+369:                 };
+370:                 parent.children[index] = tagLink;
+371:                 return SKIP;
+372:               },
+373:             );
+374:           }
+375: 
+376:           if (opts.enableInHtmlEmbed) {
+377:             visit(tree, "html", (node: Html) => {
+378:               if (opts.wikilinks) {
+379:                 node.value = node.value.replace(
+380:                   wikilinkRegex,
+381:                   (fullMatch, rawFp?: string, rawHeading?: string, rawAlias?: string) => {
+382:                     const fp = rawFp?.trim() ?? "";
+383:                     const anchor = rawHeading?.trim().replace(/^#+/, "") ?? "";
+384:                     const isEmbed = fullMatch.startsWith("!");
+385:                     let alias = rawAlias?.replace(/^\\\||\|/, "").trim() ?? "";
+386:                     if (alias.length === 0)
+387:                       alias = fp && anchor ? `${fp} > ${anchor}` : fp || anchor;
+388: 
+389:                     if (isEmbed) {
+390:                       return fullMatch;
+391:                     }
+392: 
+393:                     const isBlockRef = anchor.startsWith("^");
+394:                     const anchorPart = anchor ? `#${isBlockRef ? anchor : githubSlug(anchor)}` : "";
+395:                     if (fp.match(externalLinkRegex)) {
+396:                       return `<a href="${fp}">${alias}</a>`;
+397:                     }
+398:                     return `<a href="${fp}${anchorPart}">${alias}</a>`;
+399:                   },
+400:                 );
+401:               }
+402: 
+403:               if (opts.highlight) {
+404:                 node.value = node.value.replace(
+405:                   /==((?!=).+?)==/g,
+406:                   `<span class="text-highlight">$1</span>`,
+407:                 );
+408:               }
+409: 
+410:               if (opts.parseTags) {
+411:                 node.value = node.value.replace(
+412:                   /(?<=^|\s)#((?:[-_\p{L}\d])+(?:\/[-_\p{L}\d]+)*)/gu,
+413:                   (_match, tag: string) => {
+414:                     if (/^[\d/]+$/.test(tag)) return `#${tag}`;
+415:                     const slug = slugTag(tag);
+416:                     return `<a href="${base}/tags/${slug}" class="tag-link">${slug}</a>`;
+417:                   },
+418:                 );
+419:               }
+420:             });
+421:           }
+422:         };
+423:       });
+424: 
+425:       if (opts.enableVideoEmbed) {
+426:         plugins.push(() => {
+427:           return (tree: Root, _file) => {
+428:             visit(tree, "image", (node, index, parent) => {
+429:               if (parent && index !== undefined && videoExtensionRegex.test(node.url)) {
+430:                 const newNode: Html = {
+431:                   type: "html",
+432:                   value: `<video controls src="${node.url}"></video>`,
+433:                 };
+434: 
+435:                 parent.children.splice(index, 1, newNode);
+436:                 return SKIP;
+437:               }
+438:             });
+439:           };
+440:         });
+441:       }
+442: 
+443:       if (opts.callouts) {
+444:         plugins.push(() => {
+445:           return (tree: Root, _file) => {
+446:             visit(tree, "blockquote", (node) => {
+447:               if (node.children.length === 0) {
+448:                 return;
+449:               }
+450: 
+451:               // find first line and callout content
+452:               const [firstChild, ...calloutContent] = node.children;
+453:               if (!firstChild || firstChild.type !== "paragraph") {
+454:                 return;
+455:               }
+456:               const firstText = firstChild.children[0];
+457:               if (firstText?.type !== "text") {
+458:                 return;
+459:               }
+460: 
+461:               const text = firstText.value;
+462:               const restOfTitle = firstChild.children.slice(1);
+463:               const [firstLine, ...remainingLines] = text.split("\n") as [string, ...string[]];
+464:               const remainingText = remainingLines.join("\n");
+465: 
+466:               const match = firstLine.match(calloutRegex);
+467:               if (match && match.input) {
+468:                 const [calloutDirective, typeString, calloutMetaData, collapseChar] = match;
+469:                 const typeStringValue = typeString ?? "";
+470:                 const calloutType = canonicalizeCallout(typeStringValue.toLowerCase());
+471:                 const collapse = collapseChar === "+" || collapseChar === "-";
+472:                 const defaultState = collapseChar === "-" ? "collapsed" : "expanded";
+473:                 const titleContent = match.input.slice(calloutDirective.length).trim();
+474:                 const useDefaultTitle = titleContent === "" && restOfTitle.length === 0;
+475:                 const titleNode: Paragraph = {
+476:                   type: "paragraph",
+477:                   children: [
+478:                     {
+479:                       type: "text",
+480:                       value: useDefaultTitle
+481:                         ? capitalize(typeStringValue).replace(/-/g, " ")
+482:                         : titleContent + " ",
+483:                     },
+484:                     ...restOfTitle,
+485:                   ],
+486:                 };
+487:                 const title = mdastToHtml(titleNode);
+488: 
+489:                 const toggleIcon = `<div class="fold-callout-icon callout-fold"></div>`;
+490: 
+491:                 const titleHtml: Html = {
+492:                   type: "html",
+493:                   value: `<div
+494:                   class="callout-title"
+495:                 >
+496:                   <div class="callout-icon"></div>
+497:                   <div class="callout-title-inner">${title}</div>
+498:                   ${collapse ? toggleIcon : ""}
+499:                 </div>`,
+500:                 };
+501: 
+502:                 const blockquoteContent: (BlockContent | DefinitionContent)[] = [titleHtml];
+503:                 if (remainingText.length > 0) {
+504:                   blockquoteContent.push({
+505:                     type: "paragraph",
+506:                     children: [
+507:                       {
+508:                         type: "text",
+509:                         value: remainingText,
+510:                       },
+511:                     ],
+512:                   });
+513:                 }
+514: 
+515:                 // For the rest of the MD callout elements other than the title, wrap them with
+516:                 // two nested HTML <div>s (use some hacked mdhast component to achieve this) of
+517:                 // class `callout-content` and `callout-content-inner` respectively for
+518:                 // grid-based collapsible animation.
+519:                 if (calloutContent.length > 0) {
+520:                   node.children = [
+521:                     node.children[0]!,
+522:                     {
+523:                       data: { hProperties: { className: ["callout-content"] }, hName: "div" },
+524:                       type: "blockquote",
+525:                       children: [...calloutContent],
+526:                     },
+527:                   ];
+528:                 }
+529: 
+530:                 // replace first line of blockquote with title and rest of the paragraph text
+531:                 node.children.splice(0, 1, ...blockquoteContent);
+532: 
+533:                 const classNames = ["callout", calloutType];
+534:                 if (collapse) {
+535:                   classNames.push("is-collapsible");
+536:                 }
+537:                 if (defaultState === "collapsed") {
+538:                   classNames.push("is-collapsed");
+539:                 }
+540: 
+541:                 // add properties to base blockquote
+542:                 node.data = {
+543:                   hProperties: {
+544:                     ...(node.data?.hProperties ?? {}),
+545:                     className: classNames.join(" "),
+546:                     "data-callout": calloutType,
+547:                     "data-callout-fold": collapse,
+548:                     "data-callout-metadata": calloutMetaData,
+549:                   },
+550:                 };
+551:               }
+552:             });
+553:           };
+554:         });
+555:       }
+556: 
+557:       if (opts.mermaid) {
+558:         plugins.push(() => {
+559:           return (tree: Root, file) => {
+560:             visit(tree, "code", (node: Code) => {
+561:               if (node.lang === "mermaid") {
+562:                 file.data.hasMermaidDiagram = true;
+563:                 node.data = {
+564:                   hProperties: {
+565:                     className: ["mermaid"],
+566:                     "data-clipboard": JSON.stringify(node.value),
+567:                   },
+568:                 };
+569:               }
+570:             });
+571:           };
+572:         });
+573:       }
+574: 
+575:       return plugins;
+576:     },
+577:     htmlPlugins() {
+578:       const plugins: PluggableList = [rehypeRaw];
+579: 
+580:       plugins.push([
+581:         rehypeObsidian,
+582:         {
+583:           blockReferences: opts.parseBlockReferences,
+584:           youTubeEmbed: opts.enableYouTubeEmbed,
+585:           tweetEmbed: opts.enableTweetEmbed,
+586:           checkbox: opts.enableCheckbox,
+587:           mermaid: opts.mermaid,
+588:           obsidianUri: opts.enableObsidianUri,
+589:         },
+590:       ]);
+591: 
+592:       return plugins;
+593:     },
+594:     externalResources() {
+595:       const js: JSResource[] = [];
+596:       const css: CSSResource[] = [];
+597: 
+598:       if (opts.enableCheckbox) {
+599:         js.push({
+600:           script: checkboxScript,
+601:           loadTime: "afterDOMReady",
+602:           contentType: "inline",
+603:         });
+604:       }
+605: 
+606:       if (opts.callouts) {
+607:         js.push({
+608:           script: calloutScript,
+609:           loadTime: "afterDOMReady",
+610:           contentType: "inline",
+611:         });
+612:       }
+613: 
+614:       if (opts.mermaid) {
+615:         js.push({
+616:           script: mermaidScript,
+617:           loadTime: "afterDOMReady",
+618:           contentType: "inline",
+619:           moduleType: "module",
+620:         });
+621: 
+622:         css.push({
+623:           content: mermaidStyle,
+624:           inline: true,
+625:         });
+626:       }
+627: 
+628:       return { js, css };
+629:     },
+630:   };
+631: };
+```

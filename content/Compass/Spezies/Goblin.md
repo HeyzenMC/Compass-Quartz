@@ -2,4 +2,4 @@
 dg-publish: true
 publish: true
 ---
-![[Goblin.webp|491]]
+![[Sonstige/z_Attachments/Goblin.webp]]

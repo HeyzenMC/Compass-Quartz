@@ -2,4 +2,4 @@
 dg-publish: true
 publish: true
 ---
-![[Orc.webp|609]]
+![[Sonstige/z_Attachments/Orc.webp]]

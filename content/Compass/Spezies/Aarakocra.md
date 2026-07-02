@@ -1,1 +1,1 @@
-![[Aarakocra.webp|328]]
+![[Sonstige/z_attachments/Aarakocra.webp|328]]

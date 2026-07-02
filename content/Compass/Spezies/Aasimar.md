@@ -2,4 +2,4 @@
 dg-publish: true
 publish: true
 ---
-![[Aasimar.webp|605]]
+![[Sonstige/z_Attachments/aasimar.webp|605]]

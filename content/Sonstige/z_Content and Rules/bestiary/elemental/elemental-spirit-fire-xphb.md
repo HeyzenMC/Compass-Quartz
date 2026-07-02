@@ -1,0 +1,56 @@
+---
+obsidianUIMode: preview
+cssclasses:
+- json5e-monster
+tags:
+- ttrpg-cli/compendium/src/5e/xphb
+- ttrpg-cli/monster/cr/
+- ttrpg-cli/monster/size/medium
+- ttrpg-cli/monster/type/elemental
+statblock: inline
+statblock-link: "#^statblock"
+aliases:
+- "Elemental Spirit (Fire)"
+---
+# [Elemental Spirit (Fire)](Sonstige/z_Content%20and%20Rules/bestiary/elemental/elemental-spirit-fire-xphb.md)
+*Source: Player's Handbook (2024) p. 325*  
+
+```statblock
+"name": "Elemental Spirit (Fire) (XPHB)"
+"size": "Medium"
+"type": "elemental"
+"alignment": "Neutral"
+"ac_class": "11 + the spell's level"
+"modifier": !!int "2"
+"stats":
+  - !!int "18"
+  - !!int "15"
+  - !!int "17"
+  - !!int "4"
+  - !!int "10"
+  - !!int "16"
+"speed": "40 ft."
+"damage_resistances": "lightning, thunder (Air only)"
+"damage_immunities": "poison, fire"
+"condition_immunities": "[exhaustion](Sonstige/z_Content%20and%20Rules/conditions.md#Exhaustion),\
+  \ [paralyzed](Sonstige/z_Content%20and%20Rules/conditions.md#Paralyzed), [petrified](Sonstige/z_Content%20and%20Rules/conditions.md#Petrified),\
+  \ [poisoned](Sonstige/z_Content%20and%20Rules/conditions.md#Poisoned)"
+"senses": "[Darkvision](Sonstige/z_Content%20and%20Rules/senses.md#Darkvision) 60\
+  \ ft., passive Perception 10"
+"languages": "Primordial, understands the languages you know"
+"traits":
+  - "desc": "The spirit can move through a space as narrow as 1 inch wide without\
+      \ it counting as [Difficult Terrain](Sonstige/z_Content%20and%20Rules/variant-rules/difficult-terrain-xphb.md)."
+    "name": "Amorphous Form"
+"actions":
+  - "desc": "The spirit makes a number of Slam attacks equal to half this spell's\
+      \ level (round down)."
+    "name": "Multiattack"
+  - "desc": "*Melee Attack Roll:* Bonus equals your spell attack modifier, reach 5\
+      \ ft.. *Hit:* 1d10 + 4 + the spell's level Fire damage."
+    "name": "Slam"
+"source":
+  - "XPHB"
+"image": "Sonstige/z_Content%20and%20Rules/bestiary/elemental/token/elemental-spirit-fire-xphb.webp"
+```
+^statblock

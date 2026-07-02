@@ -2,4 +2,4 @@
 dg-publish: true
 publish: true
 ---
-![[Tortle.webp|553]]
+![[Sonstige/z_Attachments/Tortle.webp]]

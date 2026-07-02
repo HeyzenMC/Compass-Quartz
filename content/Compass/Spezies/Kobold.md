@@ -1,1 +1,1 @@
-![[Kobold.webp|337]]
+![[Sonstige/z_Attachments/Kobold.webp]]

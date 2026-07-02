@@ -1,0 +1,89 @@
+---
+obsidianUIMode: preview
+cssclasses:
+- json5e-monster
+tags:
+- ttrpg-cli/compendium/src/5e/veor
+- ttrpg-cli/monster/cr/10
+- ttrpg-cli/monster/size/medium
+- ttrpg-cli/monster/type/celestial
+statblock: inline
+statblock-link: "#^statblock"
+aliases:
+- "Inda Malayuri"
+---
+# [Inda Malayuri](Sonstige/z_Content%20and%20Rules/bestiary/npc/inda-malayuri-veor.md)
+*Source: Vecna: Eve of Ruin p. 68*  
+
+```statblock
+"name": "Inda Malayuri (VEoR)"
+"size": "Medium"
+"type": "celestial"
+"alignment": "Lawful Good"
+"ac": !!int "17"
+"ac_class": "natural armor"
+"hp": !!int "136"
+"hit_dice": "16d8 + 64"
+"modifier": !!int "4"
+"stats":
+  - !!int "18"
+  - !!int "18"
+  - !!int "18"
+  - !!int "17"
+  - !!int "20"
+  - !!int "20"
+"speed": "30 ft."
+"saves":
+  - "wisdom": !!int "9"
+  - "charisma": !!int "9"
+"skillsaves":
+  - "name": "[Insight](Sonstige/z_Content%20and%20Rules/skills.md#Insight)"
+    "desc": "+9"
+  - "name": "[Perception](Sonstige/z_Content%20and%20Rules/skills.md#Perception)"
+    "desc": "+9"
+"damage_resistances": "radiant; bludgeoning, piercing, slashing from nonmagical attacks"
+"condition_immunities": "[charmed](Sonstige/z_Content%20and%20Rules/conditions.md#Charmed),\
+  \ [exhaustion](Sonstige/z_Content%20and%20Rules/conditions.md#Exhaustion), [frightened](Sonstige/z_Content%20and%20Rules/conditions.md#Frightened)"
+"gear":
+  - "[mace](Sonstige/z_Content%20and%20Rules/items/mace-xphb.md)"
+"senses": "[darkvision](Sonstige/z_Content%20and%20Rules/senses.md#Darkvision) 120\
+  \ ft., passive Perception 19"
+"languages": "all, telepathy 120 ft."
+"cr": "10"
+"traits":
+  - "desc": "Inda's spellcasting ability is Charisma (spell save DC 17). Inda can\
+      \ innately cast the following spells, requiring only verbal components:\n\n\
+      **At will:** [detect evil and good](Sonstige/z_Content%20and%20Rules/spells/detect-evil-and-good-xphb.md)\n\
+      \n**1/day each:** [commune](Sonstige/z_Content%20and%20Rules/spells/commune-xphb.md),\
+      \ [raise dead](Sonstige/z_Content%20and%20Rules/spells/raise-dead-xphb.md)"
+    "name": "Innate Spellcasting"
+  - "desc": "Inda's weapon attacks are magical. When Inda hits with any weapon, the\
+      \ weapon deals an extra 4d8 radiant damage (included in the attack)."
+    "name": "Angelic Weapons"
+  - "desc": "Inda has advantage on saving throws against spells and other magical\
+      \ effects."
+    "name": "Magic Resistance"
+"actions":
+  - "desc": "Inda makes two melee attacks."
+    "name": "Multiattack"
+  - "desc": "*Melee Weapon Attack:* +8 to hit, reach 5 ft., one target. *Hit:* 7\
+      \ (1d6 + 4) bludgeoning damage plus 18 (4d8) radiant damage."
+    "name": "Mace"
+  - "desc": "Inda touches another creature. The target magically regains 20 (4d8\
+      \ + 2) hit points and is freed from any curse, disease, poison, blindness,\
+      \ or deafness."
+    "name": "Healing Touch (3/Day)"
+  - "desc": "Inda magically polymorphs into a humanoid or beast that has a challenge\
+      \ rating equal to or less than its own, or back into its true form. It reverts\
+      \ to its true form if it dies. Any equipment it is wearing or carrying is absorbed\
+      \ or borne by the new form (Inda's choice).\n\nIn a new form, Inda retains its\
+      \ game statistics and ability to speak, but its AC, movement modes, Strength,\
+      \ Dexterity, and special senses are replaced by those of the new form, and it\
+      \ gains any statistics and capabilities (except class features, legendary actions,\
+      \ and lair actions) that the new form has but that it lacks."
+    "name": "Change Shape"
+"source":
+  - "VEoR"
+"image": "Sonstige/z_Content%20and%20Rules/bestiary/npc/token/inda-malayuri-veor.webp"
+```
+^statblock

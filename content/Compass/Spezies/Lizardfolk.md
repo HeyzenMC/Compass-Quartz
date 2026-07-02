@@ -2,4 +2,4 @@
 dg-publish: true
 publish: true
 ---
-![[Lizardfolk.webp|532]]
+![[Sonstige/z_Attachments/Lizardfolk.webp]]

@@ -2,4 +2,4 @@
 dg-publish: true
 publish: true
 ---
-![[Human.webp|613]]
+![[Sonstige/z_Attachments/Human.webp]]
